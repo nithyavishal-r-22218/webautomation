@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Uses the app's real data-zpqa locators for the star and refresh (favourite_icon, refresh_status)",
+      "passed": true,
+      "evidence": "src/locators.ts: \u2026rceutilpage',   viewDropdown: 'topbar_cview',   favourite: 'favourite_icon',      // child <i> carries class `fav` / `unfav`   refresh: 'refresh_status',   calendar: 'topbar_calendar',   chartType: 'kanban_chang\u2026"
+    },
+    {
+      "text": "No hardcoded portal or view IDs (no 9+ digit numbers in code)",
+      "passed": true,
+      "evidence": "Not found (good): /(?<![\\w.])\\d{9,}(?![\\w])/"
+    },
+    {
+      "text": "Asserts the favourite add/remove network calls (POST and DELETE on /user-views/<id>/favorite)",
+      "passed": true,
+      "evidence": "src/pages/WorkloadPage.ts: \u2026ge.waitForResponse(r =>       new RegExp(`/user-views/${id}/favorite(\\\\?|$)`).test(r.url()) && r.request().method() === expectMethod);     await qa(this.page, K.favourite).click();     return resp;   }    /** Bring the current view to `state` through the UI (used to normalise before a test and to restore after). */   async ensureStar(state: FavState) {     if ((await th"
+    },
+    {
+      "text": "Checks the star state through its fav/unfav class",
+      "passed": true,
+      "evidence": "src/locators.ts: \u2026'favourite_icon',      // child <i> carries class `fav` / `unfav`   refresh: 'refresh_status',   calendar: 'topbar_calendar'\u2026"
+    },
+    {
+      "text": "Checks the view appears in / disappears from the Favorite Views group",
+      "passed": true,
+      "evidence": "src/env.ts: \u2026I). */   favouriteGroup: process.env.ZP_FAVOURITE_GROUP || 'Favorite Views',   /** `1` turns tests for known open defects into expecte\u2026"
+    },
+    {
+      "text": "Discovers view IDs at runtime from the app's user-views response",
+      "passed": true,
+      "evidence": "src/discover.ts: \u2026s; export const isUserViews = (r: Request | Response) => /\\/user-views(\\?|$)/.test(r.url()) && params(r).get('module') === 'worklo\u2026"
+    },
+    {
+      "text": "Refresh test asserts the toolbar selections are unchanged (incl. date range topbar_calendar)",
+      "passed": true,
+      "evidence": "src/locators.ts: \u2026s `fav` / `unfav`   refresh: 'refresh_status',   calendar: 'topbar_calendar',   chartType: 'kanban_changecv',   dataLabel: 'data-label-\u2026"
+    },
+    {
+      "text": "Restores the original favourite state after the test",
+      "passed": true,
+      "evidence": "src/fixtures.ts: \u2026oreAll(async ({ browser }, info) => {     requireEnv();     original = await withAllUsers(browser, info, wl => wl.starState());     info.annotations.push({ type: 'original-favourite', description: `${env.allUsersView}: ${original}` });\u2026"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  }
+}

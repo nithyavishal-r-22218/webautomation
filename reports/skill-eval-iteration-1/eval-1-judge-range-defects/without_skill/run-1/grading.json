@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Gives the correct expected Last 7 Days window 10-02-2026 to 10-08-2026",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026es the observed `to_date` of today 23:59:59.999) - Header: `10-02-2026 to 10-08-2026` - Grid: exactly **7** day columns, Oct 2 to Oct 8 - Reques\u2026"
+    },
+    {
+      "text": "Gives the correct expected This Week 10-04-2026 to 10-10-2026",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026Z) | Capacity / user | |---|---|---|---|---| | This Week | `10-04-2026 to 10-10-2026` | 7 (Sun Oct 4 to Sat Oct 10) | `2026-10-04T00:00:00.000`\u2026"
+    },
+    {
+      "text": "Gives the correct expected Last Week ending 10-03-2026",
+      "passed": true,
+      "evidence": "defect_report.md: \u20260.000` to `2026-10-10T23:59:59.999` | 45 h | | Last Week | `09-27-2026 to 10-03-2026` | 7 (Sun Sep 27 to Sat Oct 3) | `2026-09-27T00:00:00.000`\u2026"
+    },
+    {
+      "text": "Identifies the last week bucket overrunning the month (Oct 29 \u2013 Nov 4)",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026ks > This Month: week columns \"Oct 1 - Oct 7\" ... \"Oct 29 - Nov 4\" | **Bug**: buckets are 7-day blocks from the 1st, not Sund\u2026"
+    },
+    {
+      "text": "States 198 h is the correct total and 225 h is wrong",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026ovember | Medium | | D4 | Weeks > This Month: header total \"225 hours\" but user row total 198 h | **Bug**: header total includes Nov 2-4 (27 h) that are outside the range. **198 h is correct.** | High | | Q1 | `to_date=2026-10-08T23:59:5\u2026"
+    },
+    {
+      "text": "Quantifies the overrun as 27 h (Nov 2\u20134)",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026r row total 198 h | **Bug**: header total includes Nov 2-4 (27 h) that are outside the range. **198 h is correct.** | High |\u2026"
+    },
+    {
+      "text": "Assigns a severity to each defect",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026tions) |  ## Summary verdict  | # | Observation | Verdict | Severity | |---|---|---|---| | D1 | Days > Last 7 Days shows 10-01 to 10-08 (8 day columns) | **Bug**: off-by-one, 8 days instead of 7 | High | | D2 | Days > This Week = 10-04 to 10-11, Last Week = 09-27 to 10-04 | **Bug**: week end is the next Sunday, so each \"week\" is 8 days and the two weeks overlap on Oct 4 | High |"
+    },
+    {
+      "text": "Re-verification checks more than one layer (header + grid columns + API from/to)",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026*Mon-Fri, 9 h/day** (45 h per full week) | | Date format in header | MM-DD-YYYY | | Reported by | QA (triage written from QA observations) |  ## Summary verdict  | # | Observation | Verdict | Severity | |---|---|---|---| | D1 | Days > Last 7 Days shows 10-01 to 10-08 (8 day columns) | **Bug**: off-by-one, 8 days instead of 7 | High | | D2 | Days > This Week = 10-04 to 10-11, Las"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  }
+}

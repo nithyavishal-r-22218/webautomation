@@ -1,0 +1,27 @@
+{
+  "name": "zoho-workload-report-qa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright suite for the Zoho Projects Workload Report: views, favourites, refresh, every edit combination and edge case, permission levels (API-switched), real allocated data end to end, and defect regressions. Portal-agnostic: every ID, count and date is discovered at runtime.",
+  "scripts": {
+    "auth": "playwright test --project=auth --headed",
+    "auth:db": "playwright test --project=auth-db",
+    "test": "playwright test --project=unit --project=workload --project=permissions",
+    "test:unit": "playwright test --project=unit",
+    "test:workload": "playwright test --project=workload",
+    "test:permissions": "playwright test --project=permissions",
+    "test:defects": "playwright test --project=workload --grep @defect",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report reports/html",
+    "test:levels": "playwright test --project=permissions tests/permissions/permission-levels.spec.ts",
+    "test:data": "playwright test --project=data",
+    "test:edit": "playwright test --project=workload tests/workload/edit-combinations.spec.ts tests/workload/edit-edge.spec.ts tests/workload/edit-scope.spec.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@types/node": "^22.0.0",
+    "dotenv": "16.4.5",
+    "mysql2": "^3.24.5",
+    "typescript": "5.6.3"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "zoho-workload-all-users-favourite-refresh",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portal-agnostic Playwright tests for the Zoho Projects Global Workload Report, All Users view: add/remove favourite and refresh.",
+  "scripts": {
+    "auth": "playwright test --project=auth --headed",
+    "test": "playwright test --project=workload",
+    "test:defects": "playwright test --project=workload --grep @defect",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report reports/html"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@types/node": "^22.0.0",
+    "dotenv": "16.4.5",
+    "typescript": "5.6.3"
+  }
+}

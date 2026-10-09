@@ -1,0 +1,3210 @@
+{
+ "about": "Expected data for workload_full_coverage_import.xlsx (Q4 2026). Availability 540 min/working day Mon-Fri, no holidays. Known defects: WL-D-16 %/day capped at 100 on import, WL-D-17 weekend-only task allocated on Sat/Sun, WL-D-18 Cancelled stored as 100% complete.",
+ "availabilityMinutes": 540,
+ "quarter": {
+  "from": "2026-10-01",
+  "to": "2026-12-31"
+ },
+ "tasks": [
+  {
+   "name": "WL Oct W1 Over-allocated (1 of 2) - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 360
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1800,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "Open",
+   "taskList": "WL Oct 2026",
+   "priority": "High",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Oct W1 Over-allocated (2 of 2) - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "In Progress",
+   "taskList": "WL Oct 2026",
+   "priority": "Medium",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Oct W2 Optimally allocated - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 540
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2700,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "In Review",
+   "taskList": "WL Oct 2026",
+   "priority": "Low",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Oct W3 Under-allocated - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "To be Tested",
+   "taskList": "WL Oct 2026",
+   "priority": "None",
+   "percent": 50,
+   "billing": "Billable",
+   "team": null,
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Nov W1 Optimally allocated - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 2700
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 2700,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "On Hold",
+   "taskList": "WL Nov 2026",
+   "priority": "High",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Nov W2 Under-allocated - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 510
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2550,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "Delayed",
+   "taskList": "WL Nov 2026",
+   "priority": "Medium",
+   "percent": 90,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Nov W3 Unallocated - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 0
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 0,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "Closed",
+   "taskList": "Workload CV List",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "known": []
+  },
+  {
+   "name": "WL Nov W4 Over-allocated (1 of 2) - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 300
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1500,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Cancelled",
+   "taskList": "WL Nov 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "Non Billable",
+   "team": null,
+   "tag": "wl-over",
+   "known": [
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL Nov W4 Over-allocated (2 of 2) - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 50.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 1350,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Open",
+   "taskList": "WL Nov 2026",
+   "priority": "High",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W1 Under-allocated - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 900
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 900,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "In Progress",
+   "taskList": "WL Dec 2026",
+   "priority": "Medium",
+   "percent": 50,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Dec W3 Over-allocated - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 3600
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 3600,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "In Review",
+   "taskList": "WL Dec 2026",
+   "priority": "Low",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W4 Optimally allocated (1 of 2) - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 1080
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 1080,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "To be Tested",
+   "taskList": "WL Dec 2026",
+   "priority": "None",
+   "percent": 90,
+   "billing": "None",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Dec W4 Optimally allocated (2 of 2) - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1080,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "On Hold",
+   "taskList": "WL Dec 2026",
+   "priority": "High",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Oct W1 Optimally allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 100.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 2700,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "Delayed",
+   "taskList": "WL Oct 2026",
+   "priority": "Medium",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Oct W2 Under-allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 25.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 675,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Closed",
+   "taskList": "WL Oct 2026",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Oct W4 Over-allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 150.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 4050,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "Cancelled",
+   "taskList": "WL Oct 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "Billable",
+   "team": null,
+   "tag": "wl-over",
+   "known": [
+    "WL-D-16",
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL Nov W1 Under-allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "Open",
+   "taskList": "WL Nov 2026",
+   "priority": "High",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Nov W3 Over-allocated (1 of 2) - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 360
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1800,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "In Progress",
+   "taskList": "WL Nov 2026",
+   "priority": "Medium",
+   "percent": 90,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Nov W3 Over-allocated (2 of 2) - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "In Review",
+   "taskList": "WL Nov 2026",
+   "priority": "Low",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Nov W4 Optimally allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 540
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2700,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "To be Tested",
+   "taskList": "WL Nov 2026",
+   "priority": "None",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Dec W1 Unallocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 0
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 0,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "On Hold",
+   "taskList": "Workload CV List",
+   "priority": "High",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "known": []
+  },
+  {
+   "name": "WL Dec W2 Over-allocated (1 of 2) - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 300
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1500,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Delayed",
+   "taskList": "WL Dec 2026",
+   "priority": "Medium",
+   "percent": 50,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W2 Over-allocated (2 of 2) - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 50.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 1350,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Closed",
+   "taskList": "WL Dec 2026",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W3 Optimally allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 2700
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 2700,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "Cancelled",
+   "taskList": "WL Dec 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "None",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": [
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL Dec W4 Under-allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 510
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2040,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "Open",
+   "taskList": "WL Dec 2026",
+   "priority": "High",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Oct W1 Under-allocated - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 900
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 900,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "In Progress",
+   "taskList": "WL Oct 2026",
+   "priority": "Medium",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Oct W3 Over-allocated - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 3600
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 3600,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "In Review",
+   "taskList": "WL Oct 2026",
+   "priority": "Low",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Oct W4 Optimally allocated (1 of 2) - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 1350
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 1350,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "To be Tested",
+   "taskList": "WL Oct 2026",
+   "priority": "None",
+   "percent": 50,
+   "billing": "Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Oct W4 Optimally allocated (2 of 2) - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "On Hold",
+   "taskList": "WL Oct 2026",
+   "priority": "High",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Nov W2 Over-allocated - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 150.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 4050,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "Delayed",
+   "taskList": "WL Nov 2026",
+   "priority": "Medium",
+   "percent": 90,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": [
+    "WL-D-16"
+   ]
+  },
+  {
+   "name": "WL Nov W3 Optimally allocated - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 100.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 2700,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "Closed",
+   "taskList": "WL Nov 2026",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Nov W4 Under-allocated - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 25.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 675,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Cancelled",
+   "taskList": "WL Nov 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "Non Billable",
+   "team": null,
+   "tag": "wl-under",
+   "known": [
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL Dec W1 Over-allocated (1 of 2) - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 360
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1800,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "Open",
+   "taskList": "WL Dec 2026",
+   "priority": "High",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W1 Over-allocated (2 of 2) - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "In Progress",
+   "taskList": "WL Dec 2026",
+   "priority": "Medium",
+   "percent": 50,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W2 Optimally allocated - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 540
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2700,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "In Review",
+   "taskList": "WL Dec 2026",
+   "priority": "Low",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Dec W3 Under-allocated - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "To be Tested",
+   "taskList": "WL Dec 2026",
+   "priority": "None",
+   "percent": 90,
+   "billing": "None",
+   "team": null,
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Oct W1 Unallocated - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 0
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 0,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "On Hold",
+   "taskList": "Workload CV List",
+   "priority": "High",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "known": []
+  },
+  {
+   "name": "WL Oct W2 Over-allocated (1 of 2) - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 300
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1500,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Delayed",
+   "taskList": "WL Oct 2026",
+   "priority": "Medium",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Oct W2 Over-allocated (2 of 2) - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 50.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 1350,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Closed",
+   "taskList": "WL Oct 2026",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Oct W3 Optimally allocated - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 2700
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 2700,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "Cancelled",
+   "taskList": "WL Oct 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": [
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL Oct W4 Under-allocated - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 510
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2550,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "Open",
+   "taskList": "WL Oct 2026",
+   "priority": "High",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Nov W1 Over-allocated - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 3600
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 3600,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "In Progress",
+   "taskList": "WL Nov 2026",
+   "priority": "Medium",
+   "percent": 90,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Nov W2 Optimally allocated (1 of 2) - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 1350
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 1350,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "In Review",
+   "taskList": "WL Nov 2026",
+   "priority": "Low",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Nov W2 Optimally allocated (2 of 2) - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "To be Tested",
+   "taskList": "WL Nov 2026",
+   "priority": "None",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Nov W3 Under-allocated - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 900
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 900,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "On Hold",
+   "taskList": "WL Nov 2026",
+   "priority": "High",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Dec W1 Optimally allocated - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 100.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 2700,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "Delayed",
+   "taskList": "WL Dec 2026",
+   "priority": "Medium",
+   "percent": 50,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Dec W2 Under-allocated - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 25.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 675,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Closed",
+   "taskList": "WL Dec 2026",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Dec W4 Over-allocated - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 150.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 3240,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "Cancelled",
+   "taskList": "WL Dec 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "None",
+   "team": null,
+   "tag": "wl-over",
+   "known": [
+    "WL-D-16",
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL Oct W1 Over-allocated (1 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 360
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1800,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "Open",
+   "taskList": "WL Oct 2026",
+   "priority": "High",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Oct W1 Over-allocated (2 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "In Progress",
+   "taskList": "WL Oct 2026",
+   "priority": "Medium",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Oct W2 Optimally allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 540
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2700,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "In Review",
+   "taskList": "WL Oct 2026",
+   "priority": "Low",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Oct W3 Under-allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "To be Tested",
+   "taskList": "WL Oct 2026",
+   "priority": "None",
+   "percent": 50,
+   "billing": "Billable",
+   "team": null,
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Nov W1 Optimally allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 2700
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 2700,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "On Hold",
+   "taskList": "WL Nov 2026",
+   "priority": "High",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Nov W2 Under-allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 510
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2550,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "Delayed",
+   "taskList": "WL Nov 2026",
+   "priority": "Medium",
+   "percent": 90,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Nov W3 Unallocated - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 0
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 0,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "Closed",
+   "taskList": "Workload CV List",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "known": []
+  },
+  {
+   "name": "WL Nov W4 Over-allocated (1 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 300
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1500,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Cancelled",
+   "taskList": "WL Nov 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "Non Billable",
+   "team": null,
+   "tag": "wl-over",
+   "known": [
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL Nov W4 Over-allocated (2 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 50.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 1350,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Open",
+   "taskList": "WL Nov 2026",
+   "priority": "High",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W1 Under-allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 900
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 900,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "In Progress",
+   "taskList": "WL Dec 2026",
+   "priority": "Medium",
+   "percent": 50,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Dec W3 Over-allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 3600
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 3600,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "In Review",
+   "taskList": "WL Dec 2026",
+   "priority": "Low",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W4 Optimally allocated (1 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 1080
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 1080,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "To be Tested",
+   "taskList": "WL Dec 2026",
+   "priority": "None",
+   "percent": 90,
+   "billing": "None",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Dec W4 Optimally allocated (2 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1080,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "On Hold",
+   "taskList": "WL Dec 2026",
+   "priority": "High",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Oct W1 Optimally allocated - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 100.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 2700,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "Delayed",
+   "taskList": "WL Oct 2026",
+   "priority": "Medium",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Oct W2 Under-allocated - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 25.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 675,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Closed",
+   "taskList": "WL Oct 2026",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Oct W4 Over-allocated - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 150.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 4050,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "Cancelled",
+   "taskList": "WL Oct 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "Billable",
+   "team": null,
+   "tag": "wl-over",
+   "known": [
+    "WL-D-16",
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL Nov W1 Under-allocated - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "Open",
+   "taskList": "WL Nov 2026",
+   "priority": "High",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Nov W3 Over-allocated (1 of 2) - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 360
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1800,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "In Progress",
+   "taskList": "WL Nov 2026",
+   "priority": "Medium",
+   "percent": 90,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Nov W3 Over-allocated (2 of 2) - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "In Review",
+   "taskList": "WL Nov 2026",
+   "priority": "Low",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Nov W4 Optimally allocated - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 540
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2700,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "To be Tested",
+   "taskList": "WL Nov 2026",
+   "priority": "None",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Dec W1 Unallocated - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 0
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 0,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "On Hold",
+   "taskList": "Workload CV List",
+   "priority": "High",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "known": []
+  },
+  {
+   "name": "WL Dec W2 Over-allocated (1 of 2) - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 300
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1500,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Delayed",
+   "taskList": "WL Dec 2026",
+   "priority": "Medium",
+   "percent": 50,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W2 Over-allocated (2 of 2) - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 50.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 1350,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Closed",
+   "taskList": "WL Dec 2026",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W3 Optimally allocated - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 2700
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 2700,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "Cancelled",
+   "taskList": "WL Dec 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "None",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": [
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL Dec W4 Under-allocated - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 510
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2040,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "Open",
+   "taskList": "WL Dec 2026",
+   "priority": "High",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Oct W1 Under-allocated - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 900
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 900,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "In Progress",
+   "taskList": "WL Oct 2026",
+   "priority": "Medium",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Oct W3 Over-allocated - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 3600
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 3600,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "In Review",
+   "taskList": "WL Oct 2026",
+   "priority": "Low",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Oct W4 Optimally allocated (1 of 2) - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 1350
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 1350,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "To be Tested",
+   "taskList": "WL Oct 2026",
+   "priority": "None",
+   "percent": 50,
+   "billing": "Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Oct W4 Optimally allocated (2 of 2) - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "On Hold",
+   "taskList": "WL Oct 2026",
+   "priority": "High",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Nov W2 Over-allocated - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 150.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 4050,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "Delayed",
+   "taskList": "WL Nov 2026",
+   "priority": "Medium",
+   "percent": 90,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": [
+    "WL-D-16"
+   ]
+  },
+  {
+   "name": "WL Nov W3 Optimally allocated - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 100.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 2700,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "Closed",
+   "taskList": "WL Nov 2026",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Nov W4 Under-allocated - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 25.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 675,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Cancelled",
+   "taskList": "WL Nov 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "Non Billable",
+   "team": null,
+   "tag": "wl-under",
+   "known": [
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL Dec W1 Over-allocated (1 of 2) - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 360
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1800,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "Open",
+   "taskList": "WL Dec 2026",
+   "priority": "High",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W1 Over-allocated (2 of 2) - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "In Progress",
+   "taskList": "WL Dec 2026",
+   "priority": "Medium",
+   "percent": 50,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Dec W2 Optimally allocated - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 540
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2700,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "In Review",
+   "taskList": "WL Dec 2026",
+   "priority": "Low",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Dec W3 Under-allocated - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "To be Tested",
+   "taskList": "WL Dec 2026",
+   "priority": "None",
+   "percent": 90,
+   "billing": "None",
+   "team": null,
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Oct W1 Unallocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 0
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 0,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "On Hold",
+   "taskList": "Workload CV List",
+   "priority": "High",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "known": []
+  },
+  {
+   "name": "WL Oct W2 Over-allocated (1 of 2) - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 300
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1500,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Delayed",
+   "taskList": "WL Oct 2026",
+   "priority": "Medium",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Oct W2 Over-allocated (2 of 2) - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 50.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 1350,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Closed",
+   "taskList": "WL Oct 2026",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Oct W3 Optimally allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 2700
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 2700,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "Cancelled",
+   "taskList": "WL Oct 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": [
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL Oct W4 Under-allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 510
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2550,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "Open",
+   "taskList": "WL Oct 2026",
+   "priority": "High",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Nov W1 Over-allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 3600
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 3600,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "In Progress",
+   "taskList": "WL Nov 2026",
+   "priority": "Medium",
+   "percent": 90,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "known": []
+  },
+  {
+   "name": "WL Nov W2 Optimally allocated (1 of 2) - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 1350
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 1350,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "In Review",
+   "taskList": "WL Nov 2026",
+   "priority": "Low",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Nov W2 Optimally allocated (2 of 2) - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1350,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "To be Tested",
+   "taskList": "WL Nov 2026",
+   "priority": "None",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Nov W3 Under-allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 900
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 900,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "On Hold",
+   "taskList": "WL Nov 2026",
+   "priority": "High",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Dec W1 Optimally allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 100.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 2700,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "Delayed",
+   "taskList": "WL Dec 2026",
+   "priority": "Medium",
+   "percent": 50,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-optimal",
+   "known": []
+  },
+  {
+   "name": "WL Dec W2 Under-allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 25.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 675,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Closed",
+   "taskList": "WL Dec 2026",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "known": []
+  },
+  {
+   "name": "WL Dec W4 Over-allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 150.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 3240,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "Cancelled",
+   "taskList": "WL Dec 2026",
+   "priority": "None",
+   "percent": 0,
+   "billing": "None",
+   "team": null,
+   "tag": "wl-over",
+   "known": [
+    "WL-D-16",
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL-E01 Weekend span total hours - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 1080
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 1080,
+   "start": "2026-10-01",
+   "end": "2026-10-04",
+   "status": "Open",
+   "taskList": "WL Edge Cases",
+   "priority": "High",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "known": []
+  },
+  {
+   "name": "WL-E02 Single-day total hours - Vishal PLAdmin",
+   "owners": [
+    {
+     "name": "Vishal PLAdmin",
+     "value": 720
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 720,
+   "start": "2026-10-01",
+   "end": "2026-10-01",
+   "status": "In Progress",
+   "taskList": "WL Edge Cases",
+   "priority": "Medium",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-edge",
+   "known": []
+  },
+  {
+   "name": "WL-E03 Weekend-only task - vishal PL manager",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 240
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 480,
+   "start": "2026-10-03",
+   "end": "2026-10-04",
+   "status": "In Review",
+   "taskList": "WL Edge Cases",
+   "priority": "Low",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "known": [
+    "WL-D-17"
+   ]
+  },
+  {
+   "name": "WL-E04 Zero-hour owned task - Vishal plemployee",
+   "owners": [
+    {
+     "name": "Vishal plemployee",
+     "value": 0
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 0,
+   "start": "2026-10-01",
+   "end": "2026-10-02",
+   "status": "To be Tested",
+   "taskList": "WL Edge Cases",
+   "priority": "None",
+   "percent": 50,
+   "billing": "Billable",
+   "team": null,
+   "tag": "wl-edge",
+   "known": []
+  },
+  {
+   "name": "WL-E05 150 percent per day - Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal customprofile",
+     "value": 150.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 1620,
+   "start": "2026-10-01",
+   "end": "2026-10-02",
+   "status": "On Hold",
+   "taskList": "WL Edge Cases",
+   "priority": "High",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "known": [
+    "WL-D-16"
+   ]
+  },
+  {
+   "name": "WL-E06 Cross-month total hours - Vishal plreadonly",
+   "owners": [
+    {
+     "name": "Vishal plreadonly",
+     "value": 2700
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 2700,
+   "start": "2026-11-30",
+   "end": "2026-12-04",
+   "status": "Delayed",
+   "taskList": "WL Edge Cases",
+   "priority": "Medium",
+   "percent": 90,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-edge",
+   "known": []
+  },
+  {
+   "name": "WL-E07 Resource cross-month - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 540
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2700,
+   "start": "2026-11-30",
+   "end": "2026-12-04",
+   "status": "Closed",
+   "taskList": "WL Edge Cases",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "known": []
+  },
+  {
+   "name": "WL-E08 Multi-owner different hours - Vishal liteuser and Vishal customprofile",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 360
+    },
+    {
+     "name": "Vishal customprofile",
+     "value": 180
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 2160,
+   "start": "2026-12-01",
+   "end": "2026-12-04",
+   "status": "Cancelled",
+   "taskList": "WL Edge Cases",
+   "priority": "None",
+   "percent": 0,
+   "billing": "Non Billable",
+   "team": null,
+   "tag": "wl-edge",
+   "known": [
+    "WL-D-18"
+   ]
+  },
+  {
+   "name": "WL-E09 Multi-owner percent - Vishal workload, Vishal PLAdmin, vishal PL manager",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 50.0
+    },
+    {
+     "name": "Vishal PLAdmin",
+     "value": 25.0
+    },
+    {
+     "name": "vishal PL manager",
+     "value": 25.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 2160,
+   "start": "2026-12-01",
+   "end": "2026-12-04",
+   "status": "Open",
+   "taskList": "WL Edge Cases",
+   "priority": "High",
+   "percent": 25,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "known": []
+  },
+  {
+   "name": "WL-E10 Unassigned task with hours",
+   "owners": [
+    {
+     "name": "Unassigned",
+     "value": 240
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 1200,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "In Progress",
+   "taskList": "WL Edge Cases",
+   "priority": "Medium",
+   "percent": 50,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-edge",
+   "known": []
+  },
+  {
+   "name": "WL-E11 Unassigned task without hours",
+   "owners": [
+    {
+     "name": "Unassigned",
+     "value": 0
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 0,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "In Review",
+   "taskList": "WL Edge Cases",
+   "priority": "Low",
+   "percent": 75,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "known": []
+  },
+  {
+   "name": "WL-E12 No dates task - Vishal workload",
+   "owners": [
+    {
+     "name": "Vishal workload",
+     "value": 600
+    }
+   ],
+   "unit": "hrs",
+   "totalMinutes": 600,
+   "start": null,
+   "end": null,
+   "status": "To be Tested",
+   "taskList": "WL Edge Cases",
+   "priority": "None",
+   "percent": 90,
+   "billing": "None",
+   "team": null,
+   "tag": "wl-edge",
+   "known": []
+  },
+  {
+   "name": "WL-E13 Single Friday full day - Vishal liteuser",
+   "owners": [
+    {
+     "name": "Vishal liteuser",
+     "value": 540
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 540,
+   "start": "2026-10-02",
+   "end": "2026-10-02",
+   "status": "On Hold",
+   "taskList": "WL Edge Cases",
+   "priority": "High",
+   "percent": 0,
+   "billing": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "known": []
+  },
+  {
+   "name": "WL-E14 60 percent single day - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "name": "UIAutomation_Workload_Resource",
+     "value": 60.0
+    }
+   ],
+   "unit": "%/day",
+   "totalMinutes": 324,
+   "start": "2026-10-01",
+   "end": "2026-10-01",
+   "status": "Delayed",
+   "taskList": "WL Edge Cases",
+   "priority": "Medium",
+   "percent": 10,
+   "billing": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-edge",
+   "known": []
+  },
+  {
+   "name": "WL-E15 Multi-owner same hours - vishal PL manager and Vishal plemployee",
+   "owners": [
+    {
+     "name": "vishal PL manager",
+     "value": 270
+    },
+    {
+     "name": "Vishal plemployee",
+     "value": 270
+    }
+   ],
+   "unit": "hrs/day",
+   "totalMinutes": 540,
+   "start": "2026-11-30",
+   "end": "2026-11-30",
+   "status": "Closed",
+   "taskList": "WL Edge Cases",
+   "priority": "Low",
+   "percent": 100,
+   "billing": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "known": []
+  }
+ ],
+ "cases": [
+  {
+   "id": "Vishal workload Oct W1 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W1 Over-allocated (1 of 2) - Vishal workload",
+    "WL Oct W1 Over-allocated (2 of 2) - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Oct W2 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W2 Optimally allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Oct W3 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W3 Under-allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Nov W1 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W1 Optimally allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Nov W2 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W2 Under-allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Nov W3 Unallocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W3 Unallocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Nov W4 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W4 Over-allocated (1 of 2) - Vishal workload",
+    "WL Nov W4 Over-allocated (2 of 2) - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Dec W1 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W1 Under-allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Dec W3 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W3 Over-allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Dec W4 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W4 Optimally allocated (1 of 2) - Vishal workload",
+    "WL Dec W4 Optimally allocated (2 of 2) - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Oct W1 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W1 Optimally allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Oct W2 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W2 Under-allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Oct W4 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W4 Over-allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Nov W1 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W1 Under-allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Nov W3 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W3 Over-allocated (1 of 2) - Vishal PLAdmin",
+    "WL Nov W3 Over-allocated (2 of 2) - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Nov W4 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W4 Optimally allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Dec W1 Unallocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W1 Unallocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Dec W2 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W2 Over-allocated (1 of 2) - Vishal PLAdmin",
+    "WL Dec W2 Over-allocated (2 of 2) - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Dec W3 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W3 Optimally allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Dec W4 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W4 Under-allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "vishal PL manager Oct W1 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W1 Under-allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Oct W3 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W3 Over-allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Oct W4 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W4 Optimally allocated (1 of 2) - vishal PL manager",
+    "WL Oct W4 Optimally allocated (2 of 2) - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Nov W2 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W2 Over-allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Nov W3 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W3 Optimally allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Nov W4 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W4 Under-allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Dec W1 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W1 Over-allocated (1 of 2) - vishal PL manager",
+    "WL Dec W1 Over-allocated (2 of 2) - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Dec W2 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W2 Optimally allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Dec W3 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W3 Under-allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Oct W1 Unallocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W1 Unallocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Oct W2 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W2 Over-allocated (1 of 2) - Vishal plemployee",
+    "WL Oct W2 Over-allocated (2 of 2) - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Oct W3 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W3 Optimally allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Oct W4 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W4 Under-allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Nov W1 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W1 Over-allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Nov W2 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W2 Optimally allocated (1 of 2) - Vishal plemployee",
+    "WL Nov W2 Optimally allocated (2 of 2) - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Nov W3 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W3 Under-allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Dec W1 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W1 Optimally allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Dec W2 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W2 Under-allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Dec W4 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W4 Over-allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Oct W1 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W1 Over-allocated (1 of 2) - Vishal plreadonly",
+    "WL Oct W1 Over-allocated (2 of 2) - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Oct W2 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W2 Optimally allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Oct W3 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W3 Under-allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Nov W1 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W1 Optimally allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Nov W2 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W2 Under-allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Nov W3 Unallocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W3 Unallocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Nov W4 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W4 Over-allocated (1 of 2) - Vishal plreadonly",
+    "WL Nov W4 Over-allocated (2 of 2) - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Dec W1 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W1 Under-allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Dec W3 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W3 Over-allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Dec W4 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W4 Optimally allocated (1 of 2) - Vishal plreadonly",
+    "WL Dec W4 Optimally allocated (2 of 2) - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Oct W1 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W1 Optimally allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Oct W2 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W2 Under-allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Oct W4 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W4 Over-allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Nov W1 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W1 Under-allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Nov W3 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W3 Over-allocated (1 of 2) - Vishal liteuser",
+    "WL Nov W3 Over-allocated (2 of 2) - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Nov W4 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W4 Optimally allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Dec W1 Unallocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W1 Unallocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Dec W2 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W2 Over-allocated (1 of 2) - Vishal liteuser",
+    "WL Dec W2 Over-allocated (2 of 2) - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Dec W3 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W3 Optimally allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Dec W4 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W4 Under-allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Oct W1 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W1 Under-allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Oct W3 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W3 Over-allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Oct W4 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W4 Optimally allocated (1 of 2) - Vishal customprofile",
+    "WL Oct W4 Optimally allocated (2 of 2) - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Nov W2 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W2 Over-allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Nov W3 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W3 Optimally allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Nov W4 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W4 Under-allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Dec W1 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W1 Over-allocated (1 of 2) - Vishal customprofile",
+    "WL Dec W1 Over-allocated (2 of 2) - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Dec W2 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W2 Optimally allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Dec W3 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W3 Under-allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Oct W1 Unallocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W1 Unallocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Oct W2 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W2 Over-allocated (1 of 2) - UIAutomation_Workload_Resource",
+    "WL Oct W2 Over-allocated (2 of 2) - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Oct W3 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W3 Optimally allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Oct W4 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Oct W4 Under-allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Nov W1 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W1 Over-allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Nov W2 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W2 Optimally allocated (1 of 2) - UIAutomation_Workload_Resource",
+    "WL Nov W2 Optimally allocated (2 of 2) - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Nov W3 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Nov W3 Under-allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Dec W1 Optimally allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W1 Optimally allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Dec W2 Under-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W2 Under-allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Dec W4 Over-allocated",
+   "kind": "week",
+   "tasks": [
+    "WL Dec W4 Over-allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "WL-E01 Weekend span total hours - Vishal workload",
+   "kind": "edge",
+   "tasks": [
+    "WL-E01 Weekend span total hours - Vishal workload"
+   ]
+  },
+  {
+   "id": "WL-E02 Single-day total hours - Vishal PLAdmin",
+   "kind": "edge",
+   "tasks": [
+    "WL-E02 Single-day total hours - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "WL-E03 Weekend-only task - vishal PL manager",
+   "kind": "edge",
+   "tasks": [
+    "WL-E03 Weekend-only task - vishal PL manager"
+   ]
+  },
+  {
+   "id": "WL-E04 Zero-hour owned task - Vishal plemployee",
+   "kind": "edge",
+   "tasks": [
+    "WL-E04 Zero-hour owned task - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "WL-E05 150 percent per day - Vishal customprofile",
+   "kind": "edge",
+   "tasks": [
+    "WL-E05 150 percent per day - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "WL-E06 Cross-month total hours - Vishal plreadonly",
+   "kind": "edge",
+   "tasks": [
+    "WL-E06 Cross-month total hours - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "WL-E07 Resource cross-month - UIAutomation_Workload_Resource",
+   "kind": "edge",
+   "tasks": [
+    "WL-E07 Resource cross-month - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "WL-E08 Multi-owner different hours - Vishal liteuser and Vishal customprofile",
+   "kind": "edge",
+   "tasks": [
+    "WL-E08 Multi-owner different hours - Vishal liteuser and Vishal customprofile"
+   ]
+  },
+  {
+   "id": "WL-E09 Multi-owner percent - Vishal workload, Vishal PLAdmin, vishal PL manager",
+   "kind": "edge",
+   "tasks": [
+    "WL-E09 Multi-owner percent - Vishal workload, Vishal PLAdmin, vishal PL manager"
+   ]
+  },
+  {
+   "id": "WL-E10 Unassigned task with hours",
+   "kind": "edge",
+   "tasks": [
+    "WL-E10 Unassigned task with hours"
+   ]
+  },
+  {
+   "id": "WL-E11 Unassigned task without hours",
+   "kind": "edge",
+   "tasks": [
+    "WL-E11 Unassigned task without hours"
+   ]
+  },
+  {
+   "id": "WL-E12 No dates task - Vishal workload",
+   "kind": "edge",
+   "tasks": [
+    "WL-E12 No dates task - Vishal workload"
+   ]
+  },
+  {
+   "id": "WL-E13 Single Friday full day - Vishal liteuser",
+   "kind": "edge",
+   "tasks": [
+    "WL-E13 Single Friday full day - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "WL-E14 60 percent single day - UIAutomation_Workload_Resource",
+   "kind": "edge",
+   "tasks": [
+    "WL-E14 60 percent single day - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "WL-E15 Multi-owner same hours - vishal PL manager and Vishal plemployee",
+   "kind": "edge",
+   "tasks": [
+    "WL-E15 Multi-owner same hours - vishal PL manager and Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal workload Oct W4 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal workload",
+   "from": "20261026",
+   "to": "20261030"
+  },
+  {
+   "id": "Vishal workload Dec W2 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal workload",
+   "from": "20261214",
+   "to": "20261218"
+  },
+  {
+   "id": "Vishal PLAdmin Oct W3 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal PLAdmin",
+   "from": "20261019",
+   "to": "20261023"
+  },
+  {
+   "id": "Vishal PLAdmin Nov W2 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal PLAdmin",
+   "from": "20261109",
+   "to": "20261113"
+  },
+  {
+   "id": "vishal PL manager Oct W2 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "vishal PL manager",
+   "from": "20261012",
+   "to": "20261016"
+  },
+  {
+   "id": "vishal PL manager Nov W1 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "vishal PL manager",
+   "from": "20261102",
+   "to": "20261106"
+  },
+  {
+   "id": "vishal PL manager Dec W4 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "vishal PL manager",
+   "from": "20261228",
+   "to": "20261231"
+  },
+  {
+   "id": "Vishal plemployee Nov W4 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal plemployee",
+   "from": "20261123",
+   "to": "20261127"
+  },
+  {
+   "id": "Vishal plemployee Dec W3 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal plemployee",
+   "from": "20261221",
+   "to": "20261225"
+  },
+  {
+   "id": "Vishal plreadonly Oct W4 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal plreadonly",
+   "from": "20261026",
+   "to": "20261030"
+  },
+  {
+   "id": "Vishal plreadonly Dec W2 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal plreadonly",
+   "from": "20261214",
+   "to": "20261218"
+  },
+  {
+   "id": "Vishal liteuser Oct W3 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal liteuser",
+   "from": "20261019",
+   "to": "20261023"
+  },
+  {
+   "id": "Vishal liteuser Nov W2 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal liteuser",
+   "from": "20261109",
+   "to": "20261113"
+  },
+  {
+   "id": "Vishal customprofile Oct W2 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal customprofile",
+   "from": "20261012",
+   "to": "20261016"
+  },
+  {
+   "id": "Vishal customprofile Nov W1 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal customprofile",
+   "from": "20261102",
+   "to": "20261106"
+  },
+  {
+   "id": "Vishal customprofile Dec W4 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "Vishal customprofile",
+   "from": "20261228",
+   "to": "20261231"
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Nov W4 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "UIAutomation_Workload_Resource",
+   "from": "20261123",
+   "to": "20261127"
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Dec W3 Unallocated (no task)",
+   "kind": "week",
+   "tasks": [],
+   "owner": "UIAutomation_Workload_Resource",
+   "from": "20261221",
+   "to": "20261225"
+  }
+ ]
+}

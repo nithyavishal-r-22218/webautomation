@@ -1,0 +1,30 @@
+[
+  {
+    "name": "dev",
+    "baseURL": "${ZP_DEV_BASE_URL}",
+    "portal": "${ZP_DEV_PORTAL}",
+    "workloadPath": "/portal/{portal}#workloadreport",
+    "storageState": ".auth/dev.json"
+  },
+  {
+    "name": "staging",
+    "baseURL": "${ZP_STAGING_BASE_URL}",
+    "portal": "${ZP_STAGING_PORTAL}",
+    "workloadPath": "/portal/{portal}#workloadreport",
+    "storageState": ".auth/staging.json"
+  },
+  {
+    "name": "sandbox-customer-a",
+    "baseURL": "${ZP_SANDBOX_A_BASE_URL}",
+    "portal": "${ZP_SANDBOX_A_PORTAL}",
+    "workloadPath": "/portal/{portal}#workloadreport",
+    "storageState": ".auth/sandbox-customer-a.json",
+    "allUsersViewName": "All Users",
+    "dataRequestPattern": "workload",
+    "favouriteRequestPattern": "favou?rite",
+    "viewIdUrlPattern": "(?:view[_-]?id|viewid)[=/:]([\\w-]+)",
+    "selectors": {
+      "refreshButton": "[title='Refresh']"
+    }
+  }
+]

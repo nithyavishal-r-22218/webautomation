@@ -1,0 +1,26 @@
+{
+  "skill_name": "zoho-workload-report-qa",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "playwright-favourite-refresh-specs",
+      "prompt": "we run the zoho projects global workload report across dev, staging and a few customer sandbox portals and the data (users, view ids, dates) is different in each. write playwright tests (typescript) for the All Users view: add to favourite, remove from favourite and the refresh icon. dont hardcode anything portal specific. save the spec + any helper files.",
+      "expected_output": "TypeScript Playwright spec(s) using data-zpqa locators, runtime discovery of view/portal IDs, network assertions on favourite POST/DELETE, star state and Favorite Views group checks, refresh keeping selections.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "eval_name": "judge-range-defects",
+      "prompt": "QA ran the Zoho Projects workload report on Thu 8 Oct 2026 (portal weeks start Sunday, business hours Mon-Fri 9h). Observations: (a) Days > Relative > Last 7 Days: header '10-01-2026 to 10-08-2026', grid day columns Oct 1..Oct 8, data request to_date=2026-10-08T23:59:59.999Z. (b) Days > This Week: header 10-04-2026 to 10-11-2026; Last Week: 09-27-2026 to 10-04-2026. (c) Weeks > Relative > This Month: header 10-01-2026 to 10-31-2026, header total '225 hours', first user's row total 198h, week columns 'Oct 1 - Oct 7' ... 'Oct 29 - Nov 4', each 45h. Are these real bugs or expected? Write a defect report (markdown) with severity, expected values and how to re-verify. Save it as defect_report.md.",
+      "expected_output": "defect_report.md flagging (a)/(b) as off-by-one range defects with expected 10-02..10-08, This Week 10-04..10-10, Last Week 09-27..10-03; (c) as bucket overrun past Oct 31 inflating total (198 h correct); severities; multi-layer re-verification steps.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "permission-test-plan",
+      "prompt": "need a full test plan for workload report permissions in zoho projects. setup > profiles > project reports > workload report has view / manage / delete checkboxes, and the same under global reports > workload report. view should not allow creating or deleting a workload view, manage should allow create, delete should allow delete. give me test cases plus how we'd automate them (ui + api). save as test_plan.md",
+      "expected_output": "test_plan.md covering both levels, a permission matrix, View/Manage/Delete cases, cross-level isolation, API enforcement (PUT /reports/custom-workload), the no-delete-API caveat, checkbox-state locator caveat, and automation approach without hardcoded data.",
+      "files": []
+    }
+  ]
+}

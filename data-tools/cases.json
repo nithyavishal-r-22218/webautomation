@@ -1,0 +1,6901 @@
+{
+ "cases": [
+  {
+   "id": "Vishal workload Oct W1 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261005",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261006",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261007",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261008",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261009",
+     "m": 630,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Oct W1 Over-allocated (1 of 2) - Vishal workload",
+    "WL Oct W1 Over-allocated (2 of 2) - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Oct W2 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261012",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261013",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261014",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261015",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261016",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Oct W2 Optimally allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Oct W3 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261019",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261020",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261021",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261022",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261023",
+     "m": 270,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Oct W3 Under-allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Nov W1 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261102",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261103",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261104",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261105",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261106",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Nov W1 Optimally allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Nov W2 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261109",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261110",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261111",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261112",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261113",
+     "m": 510,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Nov W2 Under-allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Nov W3 Unallocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261116",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261117",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261118",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261119",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261120",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": [
+    "WL Nov W3 Unallocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Nov W4 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261123",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261124",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261125",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261126",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261127",
+     "m": 570,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Nov W4 Over-allocated (1 of 2) - Vishal workload",
+    "WL Nov W4 Over-allocated (2 of 2) - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Dec W1 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261207",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261208",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261209",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261210",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261211",
+     "m": 180,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Dec W1 Under-allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Dec W3 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261221",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261222",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261223",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261224",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261225",
+     "m": 720,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Dec W3 Over-allocated - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal workload Dec W4 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261228",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261229",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261230",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261231",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Dec W4 Optimally allocated (1 of 2) - Vishal workload",
+    "WL Dec W4 Optimally allocated (2 of 2) - Vishal workload"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Oct W1 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261005",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261006",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261007",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261008",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261009",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Oct W1 Optimally allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Oct W2 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261012",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261013",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261014",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261015",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261016",
+     "m": 135,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Oct W2 Under-allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Oct W4 Over-allocated",
+   "kind": "week",
+   "known": [
+    "F1"
+   ],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261026",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261027",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261028",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261029",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261030",
+     "m": 810,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Oct W4 Over-allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Nov W1 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261102",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261103",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261104",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261105",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261106",
+     "m": 270,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Nov W1 Under-allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Nov W3 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261116",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261117",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261118",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261119",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261120",
+     "m": 630,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Nov W3 Over-allocated (1 of 2) - Vishal PLAdmin",
+    "WL Nov W3 Over-allocated (2 of 2) - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Nov W4 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261123",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261124",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261125",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261126",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261127",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Nov W4 Optimally allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Dec W1 Unallocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261207",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261208",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261209",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261210",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261211",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": [
+    "WL Dec W1 Unallocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Dec W2 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261214",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261215",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261216",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261217",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261218",
+     "m": 570,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Dec W2 Over-allocated (1 of 2) - Vishal PLAdmin",
+    "WL Dec W2 Over-allocated (2 of 2) - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Dec W3 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261221",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261222",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261223",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261224",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261225",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Dec W3 Optimally allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "Vishal PLAdmin Dec W4 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261228",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261229",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261230",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261231",
+     "m": 510,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Dec W4 Under-allocated - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "vishal PL manager Oct W1 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261005",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261006",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261007",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261008",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261009",
+     "m": 180,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Oct W1 Under-allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Oct W3 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261019",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261020",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261021",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261022",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261023",
+     "m": 720,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Oct W3 Over-allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Oct W4 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261026",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261027",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261028",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261029",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261030",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Oct W4 Optimally allocated (1 of 2) - vishal PL manager",
+    "WL Oct W4 Optimally allocated (2 of 2) - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Nov W2 Over-allocated",
+   "kind": "week",
+   "known": [
+    "F1"
+   ],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261109",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261110",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261111",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261112",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261113",
+     "m": 810,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Nov W2 Over-allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Nov W3 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261116",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261117",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261118",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261119",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261120",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Nov W3 Optimally allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Nov W4 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261123",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261124",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261125",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261126",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261127",
+     "m": 135,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Nov W4 Under-allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Dec W1 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261207",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261208",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261209",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261210",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261211",
+     "m": 630,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Dec W1 Over-allocated (1 of 2) - vishal PL manager",
+    "WL Dec W1 Over-allocated (2 of 2) - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Dec W2 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261214",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261215",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261216",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261217",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261218",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Dec W2 Optimally allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "vishal PL manager Dec W3 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261221",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261222",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261223",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261224",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261225",
+     "m": 270,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Dec W3 Under-allocated - vishal PL manager"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Oct W1 Unallocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261005",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261006",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261007",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261008",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261009",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": [
+    "WL Oct W1 Unallocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Oct W2 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261012",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261013",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261014",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261015",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261016",
+     "m": 570,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Oct W2 Over-allocated (1 of 2) - Vishal plemployee",
+    "WL Oct W2 Over-allocated (2 of 2) - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Oct W3 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261019",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261020",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261021",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261022",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261023",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Oct W3 Optimally allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Oct W4 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261026",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261027",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261028",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261029",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261030",
+     "m": 510,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Oct W4 Under-allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Nov W1 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261102",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261103",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261104",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261105",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261106",
+     "m": 720,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Nov W1 Over-allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Nov W2 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261109",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261110",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261111",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261112",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261113",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Nov W2 Optimally allocated (1 of 2) - Vishal plemployee",
+    "WL Nov W2 Optimally allocated (2 of 2) - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Nov W3 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261116",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261117",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261118",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261119",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261120",
+     "m": 180,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Nov W3 Under-allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Dec W1 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261207",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261208",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261209",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261210",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261211",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Dec W1 Optimally allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Dec W2 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261214",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261215",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261216",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261217",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261218",
+     "m": 135,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Dec W2 Under-allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plemployee Dec W4 Over-allocated",
+   "kind": "week",
+   "known": [
+    "F1"
+   ],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261228",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261229",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261230",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261231",
+     "m": 810,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Dec W4 Over-allocated - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Oct W1 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261005",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261006",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261007",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261008",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261009",
+     "m": 630,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Oct W1 Over-allocated (1 of 2) - Vishal plreadonly",
+    "WL Oct W1 Over-allocated (2 of 2) - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Oct W2 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261012",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261013",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261014",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261015",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261016",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Oct W2 Optimally allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Oct W3 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261019",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261020",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261021",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261022",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261023",
+     "m": 270,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Oct W3 Under-allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Nov W1 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261102",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261103",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261104",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261105",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261106",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Nov W1 Optimally allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Nov W2 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261109",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261110",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261111",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261112",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261113",
+     "m": 510,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Nov W2 Under-allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Nov W3 Unallocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261116",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261117",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261118",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261119",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261120",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": [
+    "WL Nov W3 Unallocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Nov W4 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261123",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261124",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261125",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261126",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261127",
+     "m": 570,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Nov W4 Over-allocated (1 of 2) - Vishal plreadonly",
+    "WL Nov W4 Over-allocated (2 of 2) - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Dec W1 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261207",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261208",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261209",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261210",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261211",
+     "m": 180,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Dec W1 Under-allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Dec W3 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261221",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261222",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261223",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261224",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261225",
+     "m": 720,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Dec W3 Over-allocated - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal plreadonly Dec W4 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261228",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261229",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261230",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261231",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Dec W4 Optimally allocated (1 of 2) - Vishal plreadonly",
+    "WL Dec W4 Optimally allocated (2 of 2) - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Oct W1 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261005",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261006",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261007",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261008",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261009",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Oct W1 Optimally allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Oct W2 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261012",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261013",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261014",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261015",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261016",
+     "m": 135,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Oct W2 Under-allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Oct W4 Over-allocated",
+   "kind": "week",
+   "known": [
+    "F1"
+   ],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261026",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261027",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261028",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261029",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261030",
+     "m": 810,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Oct W4 Over-allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Nov W1 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261102",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261103",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261104",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261105",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261106",
+     "m": 270,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Nov W1 Under-allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Nov W3 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261116",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261117",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261118",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261119",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261120",
+     "m": 630,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Nov W3 Over-allocated (1 of 2) - Vishal liteuser",
+    "WL Nov W3 Over-allocated (2 of 2) - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Nov W4 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261123",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261124",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261125",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261126",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261127",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Nov W4 Optimally allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Dec W1 Unallocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261207",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261208",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261209",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261210",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261211",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": [
+    "WL Dec W1 Unallocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Dec W2 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261214",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261215",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261216",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261217",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261218",
+     "m": 570,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Dec W2 Over-allocated (1 of 2) - Vishal liteuser",
+    "WL Dec W2 Over-allocated (2 of 2) - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Dec W3 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261221",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261222",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261223",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261224",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261225",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Dec W3 Optimally allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal liteuser Dec W4 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261228",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261229",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261230",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261231",
+     "m": 510,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Dec W4 Under-allocated - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Oct W1 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261005",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261006",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261007",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261008",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261009",
+     "m": 180,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Oct W1 Under-allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Oct W3 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261019",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261020",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261021",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261022",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261023",
+     "m": 720,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Oct W3 Over-allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Oct W4 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261026",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261027",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261028",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261029",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261030",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Oct W4 Optimally allocated (1 of 2) - Vishal customprofile",
+    "WL Oct W4 Optimally allocated (2 of 2) - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Nov W2 Over-allocated",
+   "kind": "week",
+   "known": [
+    "F1"
+   ],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261109",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261110",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261111",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261112",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261113",
+     "m": 810,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Nov W2 Over-allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Nov W3 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261116",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261117",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261118",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261119",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261120",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Nov W3 Optimally allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Nov W4 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261123",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261124",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261125",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261126",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261127",
+     "m": 135,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Nov W4 Under-allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Dec W1 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261207",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261208",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261209",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261210",
+     "m": 630,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261211",
+     "m": 630,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Dec W1 Over-allocated (1 of 2) - Vishal customprofile",
+    "WL Dec W1 Over-allocated (2 of 2) - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Dec W2 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261214",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261215",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261216",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261217",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261218",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Dec W2 Optimally allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "Vishal customprofile Dec W3 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261221",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261222",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261223",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261224",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261225",
+     "m": 270,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Dec W3 Under-allocated - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Oct W1 Unallocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261005",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261006",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261007",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261008",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261009",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": [
+    "WL Oct W1 Unallocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Oct W2 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261012",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261013",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261014",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261015",
+     "m": 570,
+     "a": "over"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261016",
+     "m": 570,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Oct W2 Over-allocated (1 of 2) - UIAutomation_Workload_Resource",
+    "WL Oct W2 Over-allocated (2 of 2) - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Oct W3 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261019",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261020",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261021",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261022",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261023",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Oct W3 Optimally allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Oct W4 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261026",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261027",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261028",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261029",
+     "m": 510,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261030",
+     "m": 510,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Oct W4 Under-allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Nov W1 Over-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261102",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261103",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261104",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261105",
+     "m": 720,
+     "a": "over"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261106",
+     "m": 720,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Nov W1 Over-allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Nov W2 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261109",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261110",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261111",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261112",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261113",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Nov W2 Optimally allocated (1 of 2) - UIAutomation_Workload_Resource",
+    "WL Nov W2 Optimally allocated (2 of 2) - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Nov W3 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261116",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261117",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261118",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261119",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261120",
+     "m": 180,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Nov W3 Under-allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Dec W1 Optimally allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261207",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261208",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261209",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261210",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261211",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL Dec W1 Optimally allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Dec W2 Under-allocated",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261214",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261215",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261216",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261217",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261218",
+     "m": 135,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL Dec W2 Under-allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Dec W4 Over-allocated",
+   "kind": "week",
+   "known": [
+    "F1"
+   ],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261228",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261229",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261230",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261231",
+     "m": 810,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL Dec W4 Over-allocated - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "WL-E01 Weekend span total hours - Vishal workload",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261001",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261002",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL-E01 Weekend span total hours - Vishal workload"
+   ]
+  },
+  {
+   "id": "WL-E02 Single-day total hours - Vishal PLAdmin",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261001",
+     "m": 720,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL-E02 Single-day total hours - Vishal PLAdmin"
+   ]
+  },
+  {
+   "id": "WL-E03 Weekend-only task - vishal PL manager",
+   "kind": "edge",
+   "known": [
+    "F2"
+   ],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261003",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261004",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": [
+    "WL-E03 Weekend-only task - vishal PL manager"
+   ]
+  },
+  {
+   "id": "WL-E04 Zero-hour owned task - Vishal plemployee",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261001",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261002",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": [
+    "WL-E04 Zero-hour owned task - Vishal plemployee"
+   ]
+  },
+  {
+   "id": "WL-E05 150 percent per day - Vishal customprofile",
+   "kind": "edge",
+   "known": [
+    "F1"
+   ],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261001",
+     "m": 810,
+     "a": "over"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261002",
+     "m": 810,
+     "a": "over"
+    }
+   ],
+   "tasks": [
+    "WL-E05 150 percent per day - Vishal customprofile"
+   ]
+  },
+  {
+   "id": "WL-E06 Cross-month total hours - Vishal plreadonly",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261130",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261201",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261202",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261203",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261204",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL-E06 Cross-month total hours - Vishal plreadonly"
+   ]
+  },
+  {
+   "id": "WL-E07 Resource cross-month - UIAutomation_Workload_Resource",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261130",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261201",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261202",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261203",
+     "m": 540,
+     "a": "optimal"
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261204",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL-E07 Resource cross-month - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "WL-E08 Multi-owner different hours - Vishal liteuser and Vishal customprofile",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261201",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261202",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261203",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261204",
+     "m": 180,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261201",
+     "m": 360,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261202",
+     "m": 360,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261203",
+     "m": 360,
+     "a": "under"
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261204",
+     "m": 360,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL-E08 Multi-owner different hours - Vishal liteuser and Vishal customprofile"
+   ]
+  },
+  {
+   "id": "WL-E09 Multi-owner percent - Vishal workload, Vishal PLAdmin, vishal PL manager",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261201",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261202",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261203",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261204",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261201",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261202",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261203",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261204",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261201",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261202",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261203",
+     "m": 135,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261204",
+     "m": 135,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL-E09 Multi-owner percent - Vishal workload, Vishal PLAdmin, vishal PL manager"
+   ]
+  },
+  {
+   "id": "WL-E10 Unassigned task with hours",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "Unassigned",
+     "d": "20261005",
+     "m": 240,
+     "a": null
+    },
+    {
+     "u": "Unassigned",
+     "d": "20261006",
+     "m": 240,
+     "a": null
+    },
+    {
+     "u": "Unassigned",
+     "d": "20261007",
+     "m": 240,
+     "a": null
+    },
+    {
+     "u": "Unassigned",
+     "d": "20261008",
+     "m": 240,
+     "a": null
+    },
+    {
+     "u": "Unassigned",
+     "d": "20261009",
+     "m": 240,
+     "a": null
+    }
+   ],
+   "tasks": [
+    "WL-E10 Unassigned task with hours"
+   ]
+  },
+  {
+   "id": "WL-E11 Unassigned task without hours",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "Unassigned",
+     "d": "20261102",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Unassigned",
+     "d": "20261103",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Unassigned",
+     "d": "20261104",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Unassigned",
+     "d": "20261105",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Unassigned",
+     "d": "20261106",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": [
+    "WL-E11 Unassigned task without hours"
+   ]
+  },
+  {
+   "id": "WL-E12 No dates task - Vishal workload",
+   "kind": "edge",
+   "known": [],
+   "checks": [],
+   "tasks": [
+    "WL-E12 No dates task - Vishal workload"
+   ]
+  },
+  {
+   "id": "WL-E13 Single Friday full day - Vishal liteuser",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261002",
+     "m": 540,
+     "a": "optimal"
+    }
+   ],
+   "tasks": [
+    "WL-E13 Single Friday full day - Vishal liteuser"
+   ]
+  },
+  {
+   "id": "WL-E14 60 percent single day - UIAutomation_Workload_Resource",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261001",
+     "m": 324,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL-E14 60 percent single day - UIAutomation_Workload_Resource"
+   ]
+  },
+  {
+   "id": "WL-E15 Multi-owner same hours - vishal PL manager and Vishal plemployee",
+   "kind": "edge",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261130",
+     "m": 270,
+     "a": "under"
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261130",
+     "m": 270,
+     "a": "under"
+    }
+   ],
+   "tasks": [
+    "WL-E15 Multi-owner same hours - vishal PL manager and Vishal plemployee"
+   ]
+  },
+  {
+   "id": "Vishal workload Oct W4 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261026",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261027",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261028",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261029",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261030",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal workload Dec W2 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal workload",
+     "d": "20261214",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261215",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261216",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261217",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal workload",
+     "d": "20261218",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal PLAdmin Oct W3 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261019",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261020",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261021",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261022",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261023",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal PLAdmin Nov W2 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261109",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261110",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261111",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261112",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal PLAdmin",
+     "d": "20261113",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "vishal PL manager Oct W2 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261012",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261013",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261014",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261015",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261016",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "vishal PL manager Nov W1 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261102",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261103",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261104",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261105",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261106",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "vishal PL manager Dec W4 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "vishal PL manager",
+     "d": "20261228",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261229",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261230",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "vishal PL manager",
+     "d": "20261231",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal plemployee Nov W4 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261123",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261124",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261125",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261126",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261127",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal plemployee Dec W3 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plemployee",
+     "d": "20261221",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261222",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261223",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261224",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plemployee",
+     "d": "20261225",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal plreadonly Oct W4 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261026",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261027",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261028",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261029",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261030",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal plreadonly Dec W2 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261214",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261215",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261216",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261217",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal plreadonly",
+     "d": "20261218",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal liteuser Oct W3 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261019",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261020",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261021",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261022",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261023",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal liteuser Nov W2 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal liteuser",
+     "d": "20261109",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261110",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261111",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261112",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal liteuser",
+     "d": "20261113",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal customprofile Oct W2 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261012",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261013",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261014",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261015",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261016",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal customprofile Nov W1 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261102",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261103",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261104",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261105",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261106",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "Vishal customprofile Dec W4 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "Vishal customprofile",
+     "d": "20261228",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261229",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261230",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "Vishal customprofile",
+     "d": "20261231",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Nov W4 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261123",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261124",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261125",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261126",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261127",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  },
+  {
+   "id": "UIAutomation_Workload_Resource Dec W3 Unallocated (no task)",
+   "kind": "week",
+   "known": [],
+   "checks": [
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261221",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261222",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261223",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261224",
+     "m": 0,
+     "a": null
+    },
+    {
+     "u": "UIAutomation_Workload_Resource",
+     "d": "20261225",
+     "m": 0,
+     "a": null
+    }
+   ],
+   "tasks": []
+  }
+ ],
+ "totals": [
+  {
+   "u": "Vishal workload",
+   "mon": "Oct",
+   "m": 8280,
+   "known": []
+  },
+  {
+   "u": "Vishal workload",
+   "mon": "Nov",
+   "m": 8100,
+   "known": []
+  },
+  {
+   "u": "Vishal workload",
+   "mon": "Dec",
+   "m": 7740,
+   "known": []
+  },
+  {
+   "u": "Vishal PLAdmin",
+   "mon": "Oct",
+   "m": 8145,
+   "known": [
+    "F1"
+   ]
+  },
+  {
+   "u": "Vishal PLAdmin",
+   "mon": "Nov",
+   "m": 7200,
+   "known": []
+  },
+  {
+   "u": "Vishal PLAdmin",
+   "mon": "Dec",
+   "m": 8130,
+   "known": []
+  },
+  {
+   "u": "vishal PL manager",
+   "mon": "Oct",
+   "m": 7200,
+   "known": [
+    "F2"
+   ]
+  },
+  {
+   "u": "vishal PL manager",
+   "mon": "Nov",
+   "m": 7695,
+   "known": [
+    "F1"
+   ]
+  },
+  {
+   "u": "vishal PL manager",
+   "mon": "Dec",
+   "m": 7740,
+   "known": []
+  },
+  {
+   "u": "Vishal plemployee",
+   "mon": "Oct",
+   "m": 8100,
+   "known": []
+  },
+  {
+   "u": "Vishal plemployee",
+   "mon": "Nov",
+   "m": 7470,
+   "known": []
+  },
+  {
+   "u": "Vishal plemployee",
+   "mon": "Dec",
+   "m": 6615,
+   "known": [
+    "F1"
+   ]
+  },
+  {
+   "u": "Vishal plreadonly",
+   "mon": "Oct",
+   "m": 7200,
+   "known": []
+  },
+  {
+   "u": "Vishal plreadonly",
+   "mon": "Nov",
+   "m": 8640,
+   "known": []
+  },
+  {
+   "u": "Vishal plreadonly",
+   "mon": "Dec",
+   "m": 8820,
+   "known": []
+  },
+  {
+   "u": "Vishal liteuser",
+   "mon": "Oct",
+   "m": 7965,
+   "known": [
+    "F1"
+   ]
+  },
+  {
+   "u": "Vishal liteuser",
+   "mon": "Nov",
+   "m": 7200,
+   "known": []
+  },
+  {
+   "u": "Vishal liteuser",
+   "mon": "Dec",
+   "m": 9030,
+   "known": []
+  },
+  {
+   "u": "Vishal customprofile",
+   "mon": "Oct",
+   "m": 8820,
+   "known": [
+    "F1"
+   ]
+  },
+  {
+   "u": "Vishal customprofile",
+   "mon": "Nov",
+   "m": 7425,
+   "known": [
+    "F1"
+   ]
+  },
+  {
+   "u": "Vishal customprofile",
+   "mon": "Dec",
+   "m": 7920,
+   "known": []
+  },
+  {
+   "u": "UIAutomation_Workload_Resource",
+   "mon": "Oct",
+   "m": 8424,
+   "known": []
+  },
+  {
+   "u": "UIAutomation_Workload_Resource",
+   "mon": "Nov",
+   "m": 7740,
+   "known": []
+  },
+  {
+   "u": "UIAutomation_Workload_Resource",
+   "mon": "Dec",
+   "m": 8775,
+   "known": [
+    "F1"
+   ]
+  },
+  {
+   "u": "Unassigned",
+   "mon": "Oct",
+   "m": 1200,
+   "known": []
+  },
+  {
+   "u": "Unassigned",
+   "mon": "Nov",
+   "m": 0,
+   "known": []
+  },
+  {
+   "u": "Unassigned",
+   "mon": "Dec",
+   "m": 0,
+   "known": []
+  }
+ ],
+ "tasks": [
+  {
+   "name": "WL Oct W1 Over-allocated (1 of 2) - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 360
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1800,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "Open",
+   "tl": "WL Oct 2026",
+   "pr": "High",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W1 Over-allocated (2 of 2) - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "In Progress",
+   "tl": "WL Oct 2026",
+   "pr": "Medium",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W2 Optimally allocated - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 540
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2700,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "In Review",
+   "tl": "WL Oct 2026",
+   "pr": "Low",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W3 Under-allocated - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "To be Tested",
+   "tl": "WL Oct 2026",
+   "pr": "None",
+   "pct": 50,
+   "bt": "Billable",
+   "team": null,
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W1 Optimally allocated - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 2700
+    }
+   ],
+   "unit": "hours",
+   "total": 2700,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "On Hold",
+   "tl": "WL Nov 2026",
+   "pr": "High",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W2 Under-allocated - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 510
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2550,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "Delayed",
+   "tl": "WL Nov 2026",
+   "pr": "Medium",
+   "pct": 90,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W3 Unallocated - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 0
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 0,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "Closed",
+   "tl": "Workload CV List",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W4 Over-allocated (1 of 2) - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 300
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1500,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Cancelled",
+   "tl": "WL Nov 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "Non Billable",
+   "team": null,
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W4 Over-allocated (2 of 2) - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 50.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 1350,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Open",
+   "tl": "WL Nov 2026",
+   "pr": "High",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W1 Under-allocated - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 900
+    }
+   ],
+   "unit": "hours",
+   "total": 900,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "In Progress",
+   "tl": "WL Dec 2026",
+   "pr": "Medium",
+   "pct": 50,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W3 Over-allocated - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 3600
+    }
+   ],
+   "unit": "hours",
+   "total": 3600,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "In Review",
+   "tl": "WL Dec 2026",
+   "pr": "Low",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W4 Optimally allocated (1 of 2) - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 1080
+    }
+   ],
+   "unit": "hours",
+   "total": 1080,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "To be Tested",
+   "tl": "WL Dec 2026",
+   "pr": "None",
+   "pct": 90,
+   "bt": "None",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W4 Optimally allocated (2 of 2) - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1080,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "On Hold",
+   "tl": "WL Dec 2026",
+   "pr": "High",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W1 Optimally allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 100.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 2700,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "Delayed",
+   "tl": "WL Oct 2026",
+   "pr": "Medium",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W2 Under-allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 25.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 675,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Closed",
+   "tl": "WL Oct 2026",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W4 Over-allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 150.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 4050,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "Cancelled",
+   "tl": "WL Oct 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "Billable",
+   "team": null,
+   "tag": "wl-over",
+   "pct_over_100": true,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W1 Under-allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "Open",
+   "tl": "WL Nov 2026",
+   "pr": "High",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W3 Over-allocated (1 of 2) - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 360
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1800,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "In Progress",
+   "tl": "WL Nov 2026",
+   "pr": "Medium",
+   "pct": 90,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W3 Over-allocated (2 of 2) - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "In Review",
+   "tl": "WL Nov 2026",
+   "pr": "Low",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W4 Optimally allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 540
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2700,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "To be Tested",
+   "tl": "WL Nov 2026",
+   "pr": "None",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W1 Unallocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 0
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 0,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "On Hold",
+   "tl": "Workload CV List",
+   "pr": "High",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W2 Over-allocated (1 of 2) - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 300
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1500,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Delayed",
+   "tl": "WL Dec 2026",
+   "pr": "Medium",
+   "pct": 50,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W2 Over-allocated (2 of 2) - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 50.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 1350,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Closed",
+   "tl": "WL Dec 2026",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W3 Optimally allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 2700
+    }
+   ],
+   "unit": "hours",
+   "total": 2700,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "Cancelled",
+   "tl": "WL Dec 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "None",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W4 Under-allocated - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 510
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2040,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "Open",
+   "tl": "WL Dec 2026",
+   "pr": "High",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W1 Under-allocated - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 900
+    }
+   ],
+   "unit": "hours",
+   "total": 900,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "In Progress",
+   "tl": "WL Oct 2026",
+   "pr": "Medium",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W3 Over-allocated - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 3600
+    }
+   ],
+   "unit": "hours",
+   "total": 3600,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "In Review",
+   "tl": "WL Oct 2026",
+   "pr": "Low",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W4 Optimally allocated (1 of 2) - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 1350
+    }
+   ],
+   "unit": "hours",
+   "total": 1350,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "To be Tested",
+   "tl": "WL Oct 2026",
+   "pr": "None",
+   "pct": 50,
+   "bt": "Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W4 Optimally allocated (2 of 2) - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "On Hold",
+   "tl": "WL Oct 2026",
+   "pr": "High",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W2 Over-allocated - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 150.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 4050,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "Delayed",
+   "tl": "WL Nov 2026",
+   "pr": "Medium",
+   "pct": 90,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": true,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W3 Optimally allocated - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 100.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 2700,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "Closed",
+   "tl": "WL Nov 2026",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W4 Under-allocated - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 25.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 675,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Cancelled",
+   "tl": "WL Nov 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "Non Billable",
+   "team": null,
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W1 Over-allocated (1 of 2) - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 360
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1800,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "Open",
+   "tl": "WL Dec 2026",
+   "pr": "High",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W1 Over-allocated (2 of 2) - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "In Progress",
+   "tl": "WL Dec 2026",
+   "pr": "Medium",
+   "pct": 50,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W2 Optimally allocated - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 540
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2700,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "In Review",
+   "tl": "WL Dec 2026",
+   "pr": "Low",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W3 Under-allocated - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "To be Tested",
+   "tl": "WL Dec 2026",
+   "pr": "None",
+   "pct": 90,
+   "bt": "None",
+   "team": null,
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W1 Unallocated - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 0
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 0,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "On Hold",
+   "tl": "Workload CV List",
+   "pr": "High",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W2 Over-allocated (1 of 2) - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 300
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1500,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Delayed",
+   "tl": "WL Oct 2026",
+   "pr": "Medium",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W2 Over-allocated (2 of 2) - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 50.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 1350,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Closed",
+   "tl": "WL Oct 2026",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W3 Optimally allocated - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 2700
+    }
+   ],
+   "unit": "hours",
+   "total": 2700,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "Cancelled",
+   "tl": "WL Oct 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W4 Under-allocated - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 510
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2550,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "Open",
+   "tl": "WL Oct 2026",
+   "pr": "High",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W1 Over-allocated - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 3600
+    }
+   ],
+   "unit": "hours",
+   "total": 3600,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "In Progress",
+   "tl": "WL Nov 2026",
+   "pr": "Medium",
+   "pct": 90,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W2 Optimally allocated (1 of 2) - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 1350
+    }
+   ],
+   "unit": "hours",
+   "total": 1350,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "In Review",
+   "tl": "WL Nov 2026",
+   "pr": "Low",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W2 Optimally allocated (2 of 2) - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "To be Tested",
+   "tl": "WL Nov 2026",
+   "pr": "None",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W3 Under-allocated - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 900
+    }
+   ],
+   "unit": "hours",
+   "total": 900,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "On Hold",
+   "tl": "WL Nov 2026",
+   "pr": "High",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W1 Optimally allocated - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 100.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 2700,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "Delayed",
+   "tl": "WL Dec 2026",
+   "pr": "Medium",
+   "pct": 50,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W2 Under-allocated - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 25.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 675,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Closed",
+   "tl": "WL Dec 2026",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W4 Over-allocated - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 150.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 3240,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "Cancelled",
+   "tl": "WL Dec 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "None",
+   "team": null,
+   "tag": "wl-over",
+   "pct_over_100": true,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W1 Over-allocated (1 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 360
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1800,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "Open",
+   "tl": "WL Oct 2026",
+   "pr": "High",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W1 Over-allocated (2 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "In Progress",
+   "tl": "WL Oct 2026",
+   "pr": "Medium",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W2 Optimally allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 540
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2700,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "In Review",
+   "tl": "WL Oct 2026",
+   "pr": "Low",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W3 Under-allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "To be Tested",
+   "tl": "WL Oct 2026",
+   "pr": "None",
+   "pct": 50,
+   "bt": "Billable",
+   "team": null,
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W1 Optimally allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 2700
+    }
+   ],
+   "unit": "hours",
+   "total": 2700,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "On Hold",
+   "tl": "WL Nov 2026",
+   "pr": "High",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W2 Under-allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 510
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2550,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "Delayed",
+   "tl": "WL Nov 2026",
+   "pr": "Medium",
+   "pct": 90,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W3 Unallocated - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 0
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 0,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "Closed",
+   "tl": "Workload CV List",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W4 Over-allocated (1 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 300
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1500,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Cancelled",
+   "tl": "WL Nov 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "Non Billable",
+   "team": null,
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W4 Over-allocated (2 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 50.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 1350,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Open",
+   "tl": "WL Nov 2026",
+   "pr": "High",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W1 Under-allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 900
+    }
+   ],
+   "unit": "hours",
+   "total": 900,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "In Progress",
+   "tl": "WL Dec 2026",
+   "pr": "Medium",
+   "pct": 50,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W3 Over-allocated - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 3600
+    }
+   ],
+   "unit": "hours",
+   "total": 3600,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "In Review",
+   "tl": "WL Dec 2026",
+   "pr": "Low",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W4 Optimally allocated (1 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 1080
+    }
+   ],
+   "unit": "hours",
+   "total": 1080,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "To be Tested",
+   "tl": "WL Dec 2026",
+   "pr": "None",
+   "pct": 90,
+   "bt": "None",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W4 Optimally allocated (2 of 2) - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1080,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "On Hold",
+   "tl": "WL Dec 2026",
+   "pr": "High",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W1 Optimally allocated - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 100.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 2700,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "Delayed",
+   "tl": "WL Oct 2026",
+   "pr": "Medium",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W2 Under-allocated - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 25.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 675,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Closed",
+   "tl": "WL Oct 2026",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W4 Over-allocated - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 150.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 4050,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "Cancelled",
+   "tl": "WL Oct 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "Billable",
+   "team": null,
+   "tag": "wl-over",
+   "pct_over_100": true,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W1 Under-allocated - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "Open",
+   "tl": "WL Nov 2026",
+   "pr": "High",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W3 Over-allocated (1 of 2) - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 360
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1800,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "In Progress",
+   "tl": "WL Nov 2026",
+   "pr": "Medium",
+   "pct": 90,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W3 Over-allocated (2 of 2) - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "In Review",
+   "tl": "WL Nov 2026",
+   "pr": "Low",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W4 Optimally allocated - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 540
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2700,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "To be Tested",
+   "tl": "WL Nov 2026",
+   "pr": "None",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W1 Unallocated - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 0
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 0,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "On Hold",
+   "tl": "Workload CV List",
+   "pr": "High",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W2 Over-allocated (1 of 2) - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 300
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1500,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Delayed",
+   "tl": "WL Dec 2026",
+   "pr": "Medium",
+   "pct": 50,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W2 Over-allocated (2 of 2) - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 50.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 1350,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Closed",
+   "tl": "WL Dec 2026",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W3 Optimally allocated - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 2700
+    }
+   ],
+   "unit": "hours",
+   "total": 2700,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "Cancelled",
+   "tl": "WL Dec 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "None",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W4 Under-allocated - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 510
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2040,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "Open",
+   "tl": "WL Dec 2026",
+   "pr": "High",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W1 Under-allocated - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 900
+    }
+   ],
+   "unit": "hours",
+   "total": 900,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "In Progress",
+   "tl": "WL Oct 2026",
+   "pr": "Medium",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W3 Over-allocated - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 3600
+    }
+   ],
+   "unit": "hours",
+   "total": 3600,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "In Review",
+   "tl": "WL Oct 2026",
+   "pr": "Low",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W4 Optimally allocated (1 of 2) - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 1350
+    }
+   ],
+   "unit": "hours",
+   "total": 1350,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "To be Tested",
+   "tl": "WL Oct 2026",
+   "pr": "None",
+   "pct": 50,
+   "bt": "Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W4 Optimally allocated (2 of 2) - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "On Hold",
+   "tl": "WL Oct 2026",
+   "pr": "High",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W2 Over-allocated - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 150.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 4050,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "Delayed",
+   "tl": "WL Nov 2026",
+   "pr": "Medium",
+   "pct": 90,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": true,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W3 Optimally allocated - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 100.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 2700,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "Closed",
+   "tl": "WL Nov 2026",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W4 Under-allocated - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 25.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 675,
+   "start": "2026-11-23",
+   "end": "2026-11-27",
+   "status": "Cancelled",
+   "tl": "WL Nov 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "Non Billable",
+   "team": null,
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W1 Over-allocated (1 of 2) - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 360
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1800,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "Open",
+   "tl": "WL Dec 2026",
+   "pr": "High",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W1 Over-allocated (2 of 2) - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "In Progress",
+   "tl": "WL Dec 2026",
+   "pr": "Medium",
+   "pct": 50,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W2 Optimally allocated - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 540
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2700,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "In Review",
+   "tl": "WL Dec 2026",
+   "pr": "Low",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W3 Under-allocated - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-12-21",
+   "end": "2026-12-25",
+   "status": "To be Tested",
+   "tl": "WL Dec 2026",
+   "pr": "None",
+   "pct": 90,
+   "bt": "None",
+   "team": null,
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W1 Unallocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 0
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 0,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "On Hold",
+   "tl": "Workload CV List",
+   "pr": "High",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-unallocated",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W2 Over-allocated (1 of 2) - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 300
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1500,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Delayed",
+   "tl": "WL Oct 2026",
+   "pr": "Medium",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W2 Over-allocated (2 of 2) - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 50.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 1350,
+   "start": "2026-10-12",
+   "end": "2026-10-16",
+   "status": "Closed",
+   "tl": "WL Oct 2026",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W3 Optimally allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 2700
+    }
+   ],
+   "unit": "hours",
+   "total": 2700,
+   "start": "2026-10-19",
+   "end": "2026-10-23",
+   "status": "Cancelled",
+   "tl": "WL Oct 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Oct W4 Under-allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 510
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2550,
+   "start": "2026-10-26",
+   "end": "2026-10-30",
+   "status": "Open",
+   "tl": "WL Oct 2026",
+   "pr": "High",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W1 Over-allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 3600
+    }
+   ],
+   "unit": "hours",
+   "total": 3600,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "In Progress",
+   "tl": "WL Nov 2026",
+   "pr": "Medium",
+   "pct": 90,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-over",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W2 Optimally allocated (1 of 2) - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 1350
+    }
+   ],
+   "unit": "hours",
+   "total": 1350,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "In Review",
+   "tl": "WL Nov 2026",
+   "pr": "Low",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W2 Optimally allocated (2 of 2) - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1350,
+   "start": "2026-11-09",
+   "end": "2026-11-13",
+   "status": "To be Tested",
+   "tl": "WL Nov 2026",
+   "pr": "None",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": null,
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Nov W3 Under-allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 900
+    }
+   ],
+   "unit": "hours",
+   "total": 900,
+   "start": "2026-11-16",
+   "end": "2026-11-20",
+   "status": "On Hold",
+   "tl": "WL Nov 2026",
+   "pr": "High",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W1 Optimally allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 100.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 2700,
+   "start": "2026-12-07",
+   "end": "2026-12-11",
+   "status": "Delayed",
+   "tl": "WL Dec 2026",
+   "pr": "Medium",
+   "pct": 50,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-optimal",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W2 Under-allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 25.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 675,
+   "start": "2026-12-14",
+   "end": "2026-12-18",
+   "status": "Closed",
+   "tl": "WL Dec 2026",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-under",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL Dec W4 Over-allocated - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 150.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 3240,
+   "start": "2026-12-28",
+   "end": "2026-12-31",
+   "status": "Cancelled",
+   "tl": "WL Dec 2026",
+   "pr": "None",
+   "pct": 0,
+   "bt": "None",
+   "team": null,
+   "tag": "wl-over",
+   "pct_over_100": true,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E01 Weekend span total hours - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 1080
+    }
+   ],
+   "unit": "hours",
+   "total": 1080,
+   "start": "2026-10-01",
+   "end": "2026-10-04",
+   "status": "Open",
+   "tl": "WL Edge Cases",
+   "pr": "High",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E02 Single-day total hours - Vishal PLAdmin",
+   "owners": [
+    {
+     "n": "Vishal PLAdmin",
+     "v": 720
+    }
+   ],
+   "unit": "hours",
+   "total": 720,
+   "start": "2026-10-01",
+   "end": "2026-10-01",
+   "status": "In Progress",
+   "tl": "WL Edge Cases",
+   "pr": "Medium",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E03 Weekend-only task - vishal PL manager",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 240
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 480,
+   "start": "2026-10-03",
+   "end": "2026-10-04",
+   "status": "In Review",
+   "tl": "WL Edge Cases",
+   "pr": "Low",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": true
+  },
+  {
+   "name": "WL-E04 Zero-hour owned task - Vishal plemployee",
+   "owners": [
+    {
+     "n": "Vishal plemployee",
+     "v": 0
+    }
+   ],
+   "unit": "hours",
+   "total": 0,
+   "start": "2026-10-01",
+   "end": "2026-10-02",
+   "status": "To be Tested",
+   "tl": "WL Edge Cases",
+   "pr": "None",
+   "pct": 50,
+   "bt": "Billable",
+   "team": null,
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E05 150 percent per day - Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal customprofile",
+     "v": 150.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 1620,
+   "start": "2026-10-01",
+   "end": "2026-10-02",
+   "status": "On Hold",
+   "tl": "WL Edge Cases",
+   "pr": "High",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "pct_over_100": true,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E06 Cross-month total hours - Vishal plreadonly",
+   "owners": [
+    {
+     "n": "Vishal plreadonly",
+     "v": 2700
+    }
+   ],
+   "unit": "hours",
+   "total": 2700,
+   "start": "2026-11-30",
+   "end": "2026-12-04",
+   "status": "Delayed",
+   "tl": "WL Edge Cases",
+   "pr": "Medium",
+   "pct": 90,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E07 Resource cross-month - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 540
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2700,
+   "start": "2026-11-30",
+   "end": "2026-12-04",
+   "status": "Closed",
+   "tl": "WL Edge Cases",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E08 Multi-owner different hours - Vishal liteuser and Vishal customprofile",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 360
+    },
+    {
+     "n": "Vishal customprofile",
+     "v": 180
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 2160,
+   "start": "2026-12-01",
+   "end": "2026-12-04",
+   "status": "Cancelled",
+   "tl": "WL Edge Cases",
+   "pr": "None",
+   "pct": 0,
+   "bt": "Non Billable",
+   "team": null,
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E09 Multi-owner percent - Vishal workload, Vishal PLAdmin, vishal PL manager",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 50.0
+    },
+    {
+     "n": "Vishal PLAdmin",
+     "v": 25.0
+    },
+    {
+     "n": "vishal PL manager",
+     "v": 25.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 2160,
+   "start": "2026-12-01",
+   "end": "2026-12-04",
+   "status": "Open",
+   "tl": "WL Edge Cases",
+   "pr": "High",
+   "pct": 25,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E10 Unassigned task with hours",
+   "owners": [
+    {
+     "n": "Unassigned",
+     "v": 240
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 1200,
+   "start": "2026-10-05",
+   "end": "2026-10-09",
+   "status": "In Progress",
+   "tl": "WL Edge Cases",
+   "pr": "Medium",
+   "pct": 50,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E11 Unassigned task without hours",
+   "owners": [
+    {
+     "n": "Unassigned",
+     "v": 0
+    }
+   ],
+   "unit": "hours",
+   "total": 0,
+   "start": "2026-11-02",
+   "end": "2026-11-06",
+   "status": "In Review",
+   "tl": "WL Edge Cases",
+   "pr": "Low",
+   "pct": 75,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E12 No dates task - Vishal workload",
+   "owners": [
+    {
+     "n": "Vishal workload",
+     "v": 600
+    }
+   ],
+   "unit": "hours",
+   "total": 600,
+   "start": null,
+   "end": null,
+   "status": "To be Tested",
+   "tl": "WL Edge Cases",
+   "pr": "None",
+   "pct": 90,
+   "bt": "None",
+   "team": null,
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E13 Single Friday full day - Vishal liteuser",
+   "owners": [
+    {
+     "n": "Vishal liteuser",
+     "v": 540
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 540,
+   "start": "2026-10-02",
+   "end": "2026-10-02",
+   "status": "On Hold",
+   "tl": "WL Edge Cases",
+   "pr": "High",
+   "pct": 0,
+   "bt": "Billable",
+   "team": "UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E14 60 percent single day - UIAutomation_Workload_Resource",
+   "owners": [
+    {
+     "n": "UIAutomation_Workload_Resource",
+     "v": 60.0
+    }
+   ],
+   "unit": "%_per_day",
+   "total": 324,
+   "start": "2026-10-01",
+   "end": "2026-10-01",
+   "status": "Delayed",
+   "tl": "WL Edge Cases",
+   "pr": "Medium",
+   "pct": 10,
+   "bt": "Non Billable",
+   "team": "UIAutomation_Workload_TeamB",
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  },
+  {
+   "name": "WL-E15 Multi-owner same hours - vishal PL manager and Vishal plemployee",
+   "owners": [
+    {
+     "n": "vishal PL manager",
+     "v": 270
+    },
+    {
+     "n": "Vishal plemployee",
+     "v": 270
+    }
+   ],
+   "unit": "hours_per_day",
+   "total": 540,
+   "start": "2026-11-30",
+   "end": "2026-11-30",
+   "status": "Closed",
+   "tl": "WL Edge Cases",
+   "pr": "Low",
+   "pct": 100,
+   "bt": "None",
+   "team": "UIAutomation_Workload_TeamB, UIAutomation_Workload_TeamA",
+   "tag": "wl-edge",
+   "pct_over_100": false,
+   "weekend_only": false
+  }
+ ]
+}

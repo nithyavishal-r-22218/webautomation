@@ -1,0 +1,15 @@
+{
+  "eval_id": 2,
+  "eval_name": "permission-test-plan",
+  "prompt": "need a full test plan for workload report permissions in zoho projects. setup > profiles > project reports > workload report has view / manage / delete checkboxes, and the same under global reports > workload report. view should not allow creating or deleting a workload view, manage should allow create, delete should allow delete. give me test cases plus how we'd automate them (ui + api). save as test_plan.md",
+  "assertions": [
+    "Covers both Project Reports and Global Reports levels",
+    "Has a case that View-only cannot create a workload view",
+    "Checks API enforcement on the real save endpoint PUT /reports/custom-workload",
+    "Includes cross-level isolation (project-only vs global-only grants)",
+    "Notes that delete has no documented API and must be captured from the UI",
+    "Warns that checkbox state must be read from the ruc-checkbox wrapper (rc-checked)",
+    "Uses the real profile checkbox keys input_profile_checkbox_<id>_workloadreport_*",
+    "Plans cleanup/restore of test data (QA-WL- prefix or explicit teardown)"
+  ]
+}

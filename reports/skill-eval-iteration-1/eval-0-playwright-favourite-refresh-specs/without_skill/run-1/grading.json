@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Uses the app's real data-zpqa locators for the star and refresh (favourite_icon, refresh_status)",
+      "passed": false,
+      "evidence": "No match for /favourite_icon[\\s\\S]*refresh_status|refresh_status[\\s\\S]*favourite_icon/"
+    },
+    {
+      "text": "No hardcoded portal or view IDs (no 9+ digit numbers in code)",
+      "passed": true,
+      "evidence": "Not found (good): /(?<![\\w.])\\d{9,}(?![\\w])/"
+    },
+    {
+      "text": "Asserts the favourite add/remove network calls (POST and DELETE on /user-views/<id>/favorite)",
+      "passed": false,
+      "evidence": "No match for /favorite[\\s\\S]{0,400}(POST|DELETE)[\\s\\S]{0,800}(DELETE|POST)/"
+    },
+    {
+      "text": "Checks the star state through its fav/unfav class",
+      "passed": false,
+      "evidence": "No match for /\\bunfav\\b/"
+    },
+    {
+      "text": "Checks the view appears in / disappears from the Favorite Views group",
+      "passed": false,
+      "evidence": "No match for /Favorite Views/"
+    },
+    {
+      "text": "Discovers view IDs at runtime from the app's user-views response",
+      "passed": false,
+      "evidence": "No match for /user-views/"
+    },
+    {
+      "text": "Refresh test asserts the toolbar selections are unchanged (incl. date range topbar_calendar)",
+      "passed": false,
+      "evidence": "No match for /topbar_calendar/"
+    },
+    {
+      "text": "Restores the original favourite state after the test",
+      "passed": true,
+      "evidence": "src/fixtures/workload.fixture.ts: \u2026sers view; on  *                                teardown it restores the view's ORIGINAL favourite  *                                state, so runs are r\u2026"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 6,
+    "total": 8,
+    "pass_rate": 0.25
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Covers both Project Reports and Global Reports levels",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026* | | Location | Setup > Users > Profiles > *(profile)* > **Project Reports > Workload Report** and **Global Reports > Workload Report** | | Test types | Functional UI, API enforcement (authorization), negative / security, regression, change propagation | | Automation | UI: Playwright (TypeScript). API: Playwright `APIRequestContext` (or REST Assured / pytest + requests). Data-drive"
+    },
+    {
+      "text": "Has a case that View-only cannot create a workload view",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026ing spec (A8). Record the actual result. | P2 | | MNG-009 | View-only: edit blocked | BOTH | `*_View` | Look for rename/edit on an existing view in the UI. Send an update API request. | No UI control. API returns 403. The view is unchanged. | P1 | | MNG-010 | Manage without Delete: delete hidden | BOTH | `*_Manage` | Open the actions menu of a view you created. | No Delete option is"
+    },
+    {
+      "text": "Checks API enforcement on the real save endpoint PUT /reports/custom-workload",
+      "passed": false,
+      "evidence": "No match for /custom-workload/"
+    },
+    {
+      "text": "Includes cross-level isolation (project-only vs global-only grants)",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026e project-level Manage, and the reverse also holds. | Scope isolation section 4.6. | | A7 | A view's creator has no extra rights\u2026"
+    },
+    {
+      "text": "Notes that delete has no documented API and must be captured from the UI",
+      "passed": false,
+      "evidence": "No match for /(no|not|un)[\\s-]*(documented)[\\s\\S]{0,200}delete|delete[\\s\\S]{0,200}(not|un)[\\s-]*documented/"
+    },
+    {
+      "text": "Warns that checkbox state must be read from the ruc-checkbox wrapper (rc-checked)",
+      "passed": false,
+      "evidence": "No match for /rc-checked/"
+    },
+    {
+      "text": "Uses the real profile checkbox keys input_profile_checkbox_<id>_workloadreport_*",
+      "passed": false,
+      "evidence": "No match for /input_profile_checkbox/"
+    },
+    {
+      "text": "Plans cleanup/restore of test data (QA-WL- prefix or explicit teardown)",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026P-Alpha and P-Beta. - `qa.admin` (Admin profile) for setup, cleanup and verifying results. - One **client user** (if the portal\u2026"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 4,
+    "total": 8,
+    "pass_rate": 0.5
+  }
+}

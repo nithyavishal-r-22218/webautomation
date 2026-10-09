@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Covers both Project Reports and Global Reports levels",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026| Setup \u203a Profiles and Roles \u203a Profiles \u203a User Profiles \u203a **Project Reports \u203a Workload Report** and **Global Reports \u203a Workload Report**, each with **View / Manage / Delete** | | Scope | What each checkbox combination allows at each level (open, create, clone, edit, delete, personal actions), checked in the UI **and** through the API | | Author / date | QA, 8 Oct 2026 | | Status | P"
+    },
+    {
+      "text": "Has a case that View-only cannot create a workload view",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026Compare `meta.user_premission_details` | The flags reflect View-only (e.g. no create/delete flags). Record the exact keys found | | OPEN-07 | view | Load All Users fully: scroll `.resourceutilTableholder` until `page_info.has_next=false` | UI rows = API owners (+1 if there is an Unassigned row). A permission profile must not reduce the data the user is allowed to see |  ### 3.3 Crea"
+    },
+    {
+      "text": "Checks API enforcement on the real save endpoint PUT /reports/custom-workload",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026e, description, Bar, Days \u203a This Week. Save | `PUT /reports/custom-workload` returns 200. Toast shown. The view is listed under My Cust\u2026"
+    },
+    {
+      "text": "Includes cross-level isolation (project-only vs global-only grants)",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026| | | | | | | P7 | Project-level Full, Global-level None (\"project-only\") | Global: No. Project: as P4 | | | | | | | P8 | Global-level Full, Project-level None (\"global-only\") | Global: as P4. Project: No | | | | | |  Rules that hold across every row:  - **A hidden button is not a pass.** For each \"No\" cell, the matching API call made with that user's session must also be refused, a"
+    },
+    {
+      "text": "Notes that delete has no documented API and must be captured from the UI",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026llback or message. No blank grid, no JS error |  There is **no documented delete endpoint** for custom workload views. Before running DEL-03, capture the call the UI makes when Admin deletes a throwaway view (method, path, body) and record it in the\u2026"
+    },
+    {
+      "text": "Warns that checkbox state must be read from the ruc-checkbox wrapper (rc-checked)",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026ach level | Matches the table in \u00a72.2. **Read `ruc-checkbox[rc-checked]`; the native `input.checked` is always false** | `rc-check\u2026"
+    },
+    {
+      "text": "Uses the real profile checkbox keys input_profile_checkbox_<id>_workloadreport_*",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026Profile IDs**: read them from the Setup grid checkbox keys `input_profile_checkbox_<profileId>_workloadreport_<perm>`. - **View IDs and flags*\u2026"
+    },
+    {
+      "text": "Plans cleanup/restore of test data (QA-WL- prefix or explicit teardown)",
+      "passed": true,
+      "evidence": "test_plan.md: \u2026ad | Test user | | --- | --- | --- | --- | --- | | `none` | QA-WL-None | none | none | qa.wl.none | | `view` | QA-WL-View | Vi\u2026"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  }
+}

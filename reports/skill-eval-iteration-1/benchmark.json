@@ -1,0 +1,420 @@
+{
+  "metadata": {
+    "skill_name": "zoho-workload-report-qa",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-10-08T06:01:24Z",
+    "evals_run": [
+      0,
+      1,
+      2
+    ],
+    "runs_per_configuration": 3,
+    "model": "claude-opus-5-5"
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 265.8,
+        "tokens": 117628,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Uses the app's real data-zpqa locators for the star and refresh (favourite_icon, refresh_status)",
+          "passed": true,
+          "evidence": "src/locators.ts: \u2026rceutilpage',   viewDropdown: 'topbar_cview',   favourite: 'favourite_icon',      // child <i> carries class `fav` / `unfav`   refresh: 'refresh_status',   calendar: 'topbar_calendar',   chartType: 'kanban_chang\u2026"
+        },
+        {
+          "text": "No hardcoded portal or view IDs (no 9+ digit numbers in code)",
+          "passed": true,
+          "evidence": "Not found (good): /(?<![\\w.])\\d{9,}(?![\\w])/"
+        },
+        {
+          "text": "Asserts the favourite add/remove network calls (POST and DELETE on /user-views/<id>/favorite)",
+          "passed": true,
+          "evidence": "src/pages/WorkloadPage.ts: \u2026ge.waitForResponse(r =>       new RegExp(`/user-views/${id}/favorite(\\\\?|$)`).test(r.url()) && r.request().method() === expectMethod);     await qa(this.page, K.favourite).click();     return resp;   }    /** Bring the current view to `state` through the UI (used to normalise before a test and to restore after). */   async ensureStar(state: FavState) {     if ((await th"
+        },
+        {
+          "text": "Checks the star state through its fav/unfav class",
+          "passed": true,
+          "evidence": "src/locators.ts: \u2026'favourite_icon',      // child <i> carries class `fav` / `unfav`   refresh: 'refresh_status',   calendar: 'topbar_calendar'\u2026"
+        },
+        {
+          "text": "Checks the view appears in / disappears from the Favorite Views group",
+          "passed": true,
+          "evidence": "src/env.ts: \u2026I). */   favouriteGroup: process.env.ZP_FAVOURITE_GROUP || 'Favorite Views',   /** `1` turns tests for known open defects into expecte\u2026"
+        },
+        {
+          "text": "Discovers view IDs at runtime from the app's user-views response",
+          "passed": true,
+          "evidence": "src/discover.ts: \u2026s; export const isUserViews = (r: Request | Response) => /\\/user-views(\\?|$)/.test(r.url()) && params(r).get('module') === 'worklo\u2026"
+        },
+        {
+          "text": "Refresh test asserts the toolbar selections are unchanged (incl. date range topbar_calendar)",
+          "passed": true,
+          "evidence": "src/locators.ts: \u2026s `fav` / `unfav`   refresh: 'refresh_status',   calendar: 'topbar_calendar',   chartType: 'kanban_changecv',   dataLabel: 'data-label-\u2026"
+        },
+        {
+          "text": "Restores the original favourite state after the test",
+          "passed": true,
+          "evidence": "src/fixtures.ts: \u2026oreAll(async ({ browser }, info) => {     requireEnv();     original = await withAllUsers(browser, info, wl => wl.starState());     info.annotations.push({ type: 'original-favourite', description: `${env.allUsersView}: ${original}` });\u2026"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 94.5,
+        "tokens": 87070,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Gives the correct expected Last 7 Days window 10-02-2026 to 10-08-2026",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026lt | | --- | --- | --- | --- | --- | --- | | Last 7 Days | `10-02-2026 to 10-08-2026` (today minus 6 days through today) | 7 days, 5 working day\u2026"
+        },
+        {
+          "text": "Gives the correct expected This Week 10-04-2026 to 10-10-2026",
+          "passed": true,
+          "evidence": "defect_report.md: \u20269:59.999Z` | n/a | Pass (end date correct) | | This Week | `10-04-2026 to 10-10-2026` (Sun\u2013Sat) | 7 days | `10-04-2026 to 10-11-2026` | 8 days (\u2026"
+        },
+        {
+          "text": "Gives the correct expected Last Week ending 10-03-2026",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026(Sun\u2013Sun) | **FAIL**: end is one day late | | Last Week | `09-27-2026 to 10-03-2026` (Sun\u2013Sat) | 7 days | `09-27-2026 to 10-04-2026` | 8 days (\u2026"
+        },
+        {
+          "text": "Identifies the last week bucket overrunning the month (Oct 29 \u2013 Nov 4)",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026**198 hours** (22 working days \u00d7 9 h) | 225 hours (Oct 1 \u2013 Nov 4 = 25 working days \u00d7 9 h) | **FAIL** (+27 h) | | First user\u2026"
+        },
+        {
+          "text": "States 198 h is the correct total and 225 h is wrong",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026he week start and run past the range end. The header total (225 h) is larger than the user total (198 h). | Confirmed from QA observations (header, grid and row layers) |  Parts that behaved correctly (no defect): the (a) API `to_date` date part (2026-10-08), the (c) header range 10-01-2026 to 10-31-2026, and the (c) first-user row total of 198 h.  ---  ## WL-D-02: Days-unit rel"
+        },
+        {
+          "text": "Quantifies the overrun as 27 h (Nov 2\u20134)",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026erity: Major (functional).** The headline number (225 h) is 27 h (13.6 %) too high and does not match the per-user total (19\u2026"
+        },
+        {
+          "text": "Assigns a severity to each defect",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026one ID per root cause, continuing the WL-D series):  | ID | Severity | Observations | Summary | Status | | --- | --- | --- | --- | --- | | WL-D-02 | **Major** (functional) | (a), (b) | Days-unit relative windows are one day too long. \"Last 7 Days\" covers 8 days, and the week options run Sunday to Sunday, so Last Week and This Week overlap. | Confirmed from QA observations (2 lay"
+        },
+        {
+          "text": "Re-verification checks more than one layer (header + grid columns + API from/to)",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026verlap. | Confirmed from QA observations (2 layers for (a), header only for (b)) | | WL-D-03 | **Major** (functional) | (c) | Weeks-unit buckets start at the range start rather than the week start and run past the range end. The header total (225 h) is larger than the user total (198 h). | Confirmed from QA observations (header, grid and row layers) |  Parts that behaved correct"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 190.7,
+        "tokens": 107071,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Covers both Project Reports and Global Reports levels",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026| Setup \u203a Profiles and Roles \u203a Profiles \u203a User Profiles \u203a **Project Reports \u203a Workload Report** and **Global Reports \u203a Workload Report**, each with **View / Manage / Delete** | | Scope | What each checkbox combination allows at each level (open, create, clone, edit, delete, personal actions), checked in the UI **and** through the API | | Author / date | QA, 8 Oct 2026 | | Status | P"
+        },
+        {
+          "text": "Has a case that View-only cannot create a workload view",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026Compare `meta.user_premission_details` | The flags reflect View-only (e.g. no create/delete flags). Record the exact keys found | | OPEN-07 | view | Load All Users fully: scroll `.resourceutilTableholder` until `page_info.has_next=false` | UI rows = API owners (+1 if there is an Unassigned row). A permission profile must not reduce the data the user is allowed to see |  ### 3.3 Crea"
+        },
+        {
+          "text": "Checks API enforcement on the real save endpoint PUT /reports/custom-workload",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026e, description, Bar, Days \u203a This Week. Save | `PUT /reports/custom-workload` returns 200. Toast shown. The view is listed under My Cust\u2026"
+        },
+        {
+          "text": "Includes cross-level isolation (project-only vs global-only grants)",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026| | | | | | | P7 | Project-level Full, Global-level None (\"project-only\") | Global: No. Project: as P4 | | | | | | | P8 | Global-level Full, Project-level None (\"global-only\") | Global: as P4. Project: No | | | | | |  Rules that hold across every row:  - **A hidden button is not a pass.** For each \"No\" cell, the matching API call made with that user's session must also be refused, a"
+        },
+        {
+          "text": "Notes that delete has no documented API and must be captured from the UI",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026llback or message. No blank grid, no JS error |  There is **no documented delete endpoint** for custom workload views. Before running DEL-03, capture the call the UI makes when Admin deletes a throwaway view (method, path, body) and record it in the\u2026"
+        },
+        {
+          "text": "Warns that checkbox state must be read from the ruc-checkbox wrapper (rc-checked)",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026ach level | Matches the table in \u00a72.2. **Read `ruc-checkbox[rc-checked]`; the native `input.checked` is always false** | `rc-check\u2026"
+        },
+        {
+          "text": "Uses the real profile checkbox keys input_profile_checkbox_<id>_workloadreport_*",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026Profile IDs**: read them from the Setup grid checkbox keys `input_profile_checkbox_<profileId>_workloadreport_<perm>`. - **View IDs and flags*\u2026"
+        },
+        {
+          "text": "Plans cleanup/restore of test data (QA-WL- prefix or explicit teardown)",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026ad | Test user | | --- | --- | --- | --- | --- | | `none` | QA-WL-None | none | none | qa.wl.none | | `view` | QA-WL-View | Vi\u2026"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.25,
+        "passed": 2,
+        "failed": 6,
+        "total": 8,
+        "time_seconds": 267.1,
+        "tokens": 95252,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Uses the app's real data-zpqa locators for the star and refresh (favourite_icon, refresh_status)",
+          "passed": false,
+          "evidence": "No match for /favourite_icon[\\s\\S]*refresh_status|refresh_status[\\s\\S]*favourite_icon/"
+        },
+        {
+          "text": "No hardcoded portal or view IDs (no 9+ digit numbers in code)",
+          "passed": true,
+          "evidence": "Not found (good): /(?<![\\w.])\\d{9,}(?![\\w])/"
+        },
+        {
+          "text": "Asserts the favourite add/remove network calls (POST and DELETE on /user-views/<id>/favorite)",
+          "passed": false,
+          "evidence": "No match for /favorite[\\s\\S]{0,400}(POST|DELETE)[\\s\\S]{0,800}(DELETE|POST)/"
+        },
+        {
+          "text": "Checks the star state through its fav/unfav class",
+          "passed": false,
+          "evidence": "No match for /\\bunfav\\b/"
+        },
+        {
+          "text": "Checks the view appears in / disappears from the Favorite Views group",
+          "passed": false,
+          "evidence": "No match for /Favorite Views/"
+        },
+        {
+          "text": "Discovers view IDs at runtime from the app's user-views response",
+          "passed": false,
+          "evidence": "No match for /user-views/"
+        },
+        {
+          "text": "Refresh test asserts the toolbar selections are unchanged (incl. date range topbar_calendar)",
+          "passed": false,
+          "evidence": "No match for /topbar_calendar/"
+        },
+        {
+          "text": "Restores the original favourite state after the test",
+          "passed": true,
+          "evidence": "src/fixtures/workload.fixture.ts: \u2026sers view; on  *                                teardown it restores the view's ORIGINAL favourite  *                                state, so runs are r\u2026"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 82.6,
+        "tokens": 73813,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Gives the correct expected Last 7 Days window 10-02-2026 to 10-08-2026",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026es the observed `to_date` of today 23:59:59.999) - Header: `10-02-2026 to 10-08-2026` - Grid: exactly **7** day columns, Oct 2 to Oct 8 - Reques\u2026"
+        },
+        {
+          "text": "Gives the correct expected This Week 10-04-2026 to 10-10-2026",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026Z) | Capacity / user | |---|---|---|---|---| | This Week | `10-04-2026 to 10-10-2026` | 7 (Sun Oct 4 to Sat Oct 10) | `2026-10-04T00:00:00.000`\u2026"
+        },
+        {
+          "text": "Gives the correct expected Last Week ending 10-03-2026",
+          "passed": true,
+          "evidence": "defect_report.md: \u20260.000` to `2026-10-10T23:59:59.999` | 45 h | | Last Week | `09-27-2026 to 10-03-2026` | 7 (Sun Sep 27 to Sat Oct 3) | `2026-09-27T00:00:00.000`\u2026"
+        },
+        {
+          "text": "Identifies the last week bucket overrunning the month (Oct 29 \u2013 Nov 4)",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026ks > This Month: week columns \"Oct 1 - Oct 7\" ... \"Oct 29 - Nov 4\" | **Bug**: buckets are 7-day blocks from the 1st, not Sund\u2026"
+        },
+        {
+          "text": "States 198 h is the correct total and 225 h is wrong",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026ovember | Medium | | D4 | Weeks > This Month: header total \"225 hours\" but user row total 198 h | **Bug**: header total includes Nov 2-4 (27 h) that are outside the range. **198 h is correct.** | High | | Q1 | `to_date=2026-10-08T23:59:5\u2026"
+        },
+        {
+          "text": "Quantifies the overrun as 27 h (Nov 2\u20134)",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026r row total 198 h | **Bug**: header total includes Nov 2-4 (27 h) that are outside the range. **198 h is correct.** | High |\u2026"
+        },
+        {
+          "text": "Assigns a severity to each defect",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026tions) |  ## Summary verdict  | # | Observation | Verdict | Severity | |---|---|---|---| | D1 | Days > Last 7 Days shows 10-01 to 10-08 (8 day columns) | **Bug**: off-by-one, 8 days instead of 7 | High | | D2 | Days > This Week = 10-04 to 10-11, Last Week = 09-27 to 10-04 | **Bug**: week end is the next Sunday, so each \"week\" is 8 days and the two weeks overlap on Oct 4 | High |"
+        },
+        {
+          "text": "Re-verification checks more than one layer (header + grid columns + API from/to)",
+          "passed": true,
+          "evidence": "defect_report.md: \u2026*Mon-Fri, 9 h/day** (45 h per full week) | | Date format in header | MM-DD-YYYY | | Reported by | QA (triage written from QA observations) |  ## Summary verdict  | # | Observation | Verdict | Severity | |---|---|---|---| | D1 | Days > Last 7 Days shows 10-01 to 10-08 (8 day columns) | **Bug**: off-by-one, 8 days instead of 7 | High | | D2 | Days > This Week = 10-04 to 10-11, Las"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 4,
+        "failed": 4,
+        "total": 8,
+        "time_seconds": 172.1,
+        "tokens": 83696,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Covers both Project Reports and Global Reports levels",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026* | | Location | Setup > Users > Profiles > *(profile)* > **Project Reports > Workload Report** and **Global Reports > Workload Report** | | Test types | Functional UI, API enforcement (authorization), negative / security, regression, change propagation | | Automation | UI: Playwright (TypeScript). API: Playwright `APIRequestContext` (or REST Assured / pytest + requests). Data-drive"
+        },
+        {
+          "text": "Has a case that View-only cannot create a workload view",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026ing spec (A8). Record the actual result. | P2 | | MNG-009 | View-only: edit blocked | BOTH | `*_View` | Look for rename/edit on an existing view in the UI. Send an update API request. | No UI control. API returns 403. The view is unchanged. | P1 | | MNG-010 | Manage without Delete: delete hidden | BOTH | `*_Manage` | Open the actions menu of a view you created. | No Delete option is"
+        },
+        {
+          "text": "Checks API enforcement on the real save endpoint PUT /reports/custom-workload",
+          "passed": false,
+          "evidence": "No match for /custom-workload/"
+        },
+        {
+          "text": "Includes cross-level isolation (project-only vs global-only grants)",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026e project-level Manage, and the reverse also holds. | Scope isolation section 4.6. | | A7 | A view's creator has no extra rights\u2026"
+        },
+        {
+          "text": "Notes that delete has no documented API and must be captured from the UI",
+          "passed": false,
+          "evidence": "No match for /(no|not|un)[\\s-]*(documented)[\\s\\S]{0,200}delete|delete[\\s\\S]{0,200}(not|un)[\\s-]*documented/"
+        },
+        {
+          "text": "Warns that checkbox state must be read from the ruc-checkbox wrapper (rc-checked)",
+          "passed": false,
+          "evidence": "No match for /rc-checked/"
+        },
+        {
+          "text": "Uses the real profile checkbox keys input_profile_checkbox_<id>_workloadreport_*",
+          "passed": false,
+          "evidence": "No match for /input_profile_checkbox/"
+        },
+        {
+          "text": "Plans cleanup/restore of test data (QA-WL- prefix or explicit teardown)",
+          "passed": true,
+          "evidence": "test_plan.md: \u2026P-Alpha and P-Beta. - `qa.admin` (Admin profile) for setup, cleanup and verifying results. - One **client user** (if the portal\u2026"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 183.6667,
+        "stddev": 85.8663,
+        "min": 94.5,
+        "max": 265.8
+      },
+      "tokens": {
+        "mean": 103923.0,
+        "stddev": 15520.3179,
+        "min": 87070,
+        "max": 117628
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.5833,
+        "stddev": 0.3819,
+        "min": 0.25,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 173.9333,
+        "stddev": 92.2637,
+        "min": 82.6,
+        "max": 267.1
+      },
+      "tokens": {
+        "mean": 84253.6667,
+        "stddev": 10730.3739,
+        "min": 73813,
+        "max": 95252
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.42",
+      "time_seconds": "+9.7",
+      "tokens": "+19669"
+    }
+  },
+  "notes": [
+    "Eval 1 (judge range defects) is non-discriminating: both configs scored 8/8 because the date maths is solvable from the prompt alone. The skill's value there is in naming (WL-D-02/03), re-verification steps with the browser helper, and noticing the WL-D-02 test only checks to_date.",
+    "The big gains are portal knowledge: real data-zpqa locators, the user-views / custom-workload endpoints, fav/unfav classes and the rc-checked trap. The baseline invented selectors and placeholder endpoints in evals 0 and 2.",
+    "Cost: with-skill runs used ~23% more tokens (+19.7k) and ~10 s more on average, mostly from reading references and the bundled project.",
+    "The with-skill permission plan found real gaps in the bundled permissions spec (minimal PUT body could fail for the wrong reason; G-05 compared flags of a different view than the menu it opened; Delete never checked; D-02 test checked only to_date). Fixed after this iteration: the API tests now replay the app's own captured save body (Admin replay must succeed first), the menu is opened on the seed view itself, the Delete menu item and is_deletable are checked, and from_date is asserted. Executing a delete is still pending a confirmed delete locator/endpoint.",
+    "Single run per configuration: variance figures reflect differences between evals, not run-to-run noise."
+  ]
+}

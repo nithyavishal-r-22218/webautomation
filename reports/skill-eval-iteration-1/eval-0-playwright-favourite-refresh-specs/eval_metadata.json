@@ -1,0 +1,15 @@
+{
+  "eval_id": 0,
+  "eval_name": "playwright-favourite-refresh-specs",
+  "prompt": "we run the zoho projects global workload report across dev, staging and a few customer sandbox portals and the data (users, view ids, dates) is different in each. write playwright tests (typescript) for the All Users view: add to favourite, remove from favourite and the refresh icon. dont hardcode anything portal specific. save the spec + any helper files.",
+  "assertions": [
+    "Uses the app's real data-zpqa locators for the star and refresh (favourite_icon, refresh_status)",
+    "No hardcoded portal or view IDs (no 9+ digit numbers in code)",
+    "Asserts the favourite add/remove network calls (POST and DELETE on /user-views/<id>/favorite)",
+    "Checks the star state through its fav/unfav class",
+    "Checks the view appears in / disappears from the Favorite Views group",
+    "Discovers view IDs at runtime from the app's user-views response",
+    "Refresh test asserts the toolbar selections are unchanged (incl. date range topbar_calendar)",
+    "Restores the original favourite state after the test"
+  ]
+}

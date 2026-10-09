@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "eval_name": "judge-range-defects",
+  "prompt": "QA ran the Zoho Projects workload report on Thu 8 Oct 2026 (portal weeks start Sunday, business hours Mon-Fri 9h). Observations: (a) Days > Relative > Last 7 Days: header '10-01-2026 to 10-08-2026', grid day columns Oct 1..Oct 8, data request to_date=2026-10-08T23:59:59.999Z. (b) Days > This Week: header 10-04-2026 to 10-11-2026; Last Week: 09-27-2026 to 10-04-2026. (c) Weeks > Relative > This Month: header 10-01-2026 to 10-31-2026, header total '225 hours', first user's row total 198h, week columns 'Oct 1 - Oct 7' ... 'Oct 29 - Nov 4', each 45h. Are these real bugs or expected? Write a defect report (markdown) with severity, expected values and how to re-verify. Save it as defect_report.md.",
+  "assertions": [
+    "Gives the correct expected Last 7 Days window 10-02-2026 to 10-08-2026",
+    "Gives the correct expected This Week 10-04-2026 to 10-10-2026",
+    "Gives the correct expected Last Week ending 10-03-2026",
+    "Identifies the last week bucket overrunning the month (Oct 29 \u2013 Nov 4)",
+    "States 198 h is the correct total and 225 h is wrong",
+    "Quantifies the overrun as 27 h (Nov 2\u20134)",
+    "Assigns a severity to each defect",
+    "Re-verification checks more than one layer (header + grid columns + API from/to)"
+  ]
+}

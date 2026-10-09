@@ -1,0 +1,14 @@
+{
+  "name": "zoho-workload-report-e2e",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:dev": "TARGET_PORTALS=dev playwright test",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0"
+  }
+}

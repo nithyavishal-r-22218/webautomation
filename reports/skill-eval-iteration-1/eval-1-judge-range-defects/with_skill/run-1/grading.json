@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Gives the correct expected Last 7 Days window 10-02-2026 to 10-08-2026",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026lt | | --- | --- | --- | --- | --- | --- | | Last 7 Days | `10-02-2026 to 10-08-2026` (today minus 6 days through today) | 7 days, 5 working day\u2026"
+    },
+    {
+      "text": "Gives the correct expected This Week 10-04-2026 to 10-10-2026",
+      "passed": true,
+      "evidence": "defect_report.md: \u20269:59.999Z` | n/a | Pass (end date correct) | | This Week | `10-04-2026 to 10-10-2026` (Sun\u2013Sat) | 7 days | `10-04-2026 to 10-11-2026` | 8 days (\u2026"
+    },
+    {
+      "text": "Gives the correct expected Last Week ending 10-03-2026",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026(Sun\u2013Sun) | **FAIL**: end is one day late | | Last Week | `09-27-2026 to 10-03-2026` (Sun\u2013Sat) | 7 days | `09-27-2026 to 10-04-2026` | 8 days (\u2026"
+    },
+    {
+      "text": "Identifies the last week bucket overrunning the month (Oct 29 \u2013 Nov 4)",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026**198 hours** (22 working days \u00d7 9 h) | 225 hours (Oct 1 \u2013 Nov 4 = 25 working days \u00d7 9 h) | **FAIL** (+27 h) | | First user\u2026"
+    },
+    {
+      "text": "States 198 h is the correct total and 225 h is wrong",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026he week start and run past the range end. The header total (225 h) is larger than the user total (198 h). | Confirmed from QA observations (header, grid and row layers) |  Parts that behaved correctly (no defect): the (a) API `to_date` date part (2026-10-08), the (c) header range 10-01-2026 to 10-31-2026, and the (c) first-user row total of 198 h.  ---  ## WL-D-02: Days-unit rel"
+    },
+    {
+      "text": "Quantifies the overrun as 27 h (Nov 2\u20134)",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026erity: Major (functional).** The headline number (225 h) is 27 h (13.6 %) too high and does not match the per-user total (19\u2026"
+    },
+    {
+      "text": "Assigns a severity to each defect",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026one ID per root cause, continuing the WL-D series):  | ID | Severity | Observations | Summary | Status | | --- | --- | --- | --- | --- | | WL-D-02 | **Major** (functional) | (a), (b) | Days-unit relative windows are one day too long. \"Last 7 Days\" covers 8 days, and the week options run Sunday to Sunday, so Last Week and This Week overlap. | Confirmed from QA observations (2 lay"
+    },
+    {
+      "text": "Re-verification checks more than one layer (header + grid columns + API from/to)",
+      "passed": true,
+      "evidence": "defect_report.md: \u2026verlap. | Confirmed from QA observations (2 layers for (a), header only for (b)) | | WL-D-03 | **Major** (functional) | (c) | Weeks-unit buckets start at the range start rather than the week start and run past the range end. The header total (225 h) is larger than the user total (198 h). | Confirmed from QA observations (header, grid and row layers) |  Parts that behaved correct"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  }
+}
