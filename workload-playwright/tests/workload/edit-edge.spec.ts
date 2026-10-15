@@ -10,7 +10,9 @@ import { expectedRange, headerText, addDays, parseShown, startOfWeek, type Range
  * plus Cancel, field limits, toolbar Save as (Existing / New / Discard), network failure and keyboard use.
  * Runs on ZP_EDIT_VIEW (default All Users) and restores the view's settings at the end.
  */
-test.describe.configure({ mode: 'serial' });
+// Not serial: every case sets what it checks, so one failure must not skip the rest. workers=1 keeps the
+// order; preserveViewSettings() reuses the saved original snapshot if a new worker starts after a failure.
+test.describe.configure({ mode: 'default' });
 preserveViewSettings();
 
 const today = new Date();

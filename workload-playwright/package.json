@@ -15,13 +15,23 @@
     "report": "playwright show-report reports/html",
     "test:levels": "playwright test --project=permissions tests/permissions/permission-levels.spec.ts",
     "test:data": "playwright test --project=data",
-    "test:edit": "playwright test --project=workload tests/workload/edit-combinations.spec.ts tests/workload/edit-edge.spec.ts tests/workload/edit-scope.spec.ts"
+    "test:edit": "playwright test --project=workload tests/workload/edit-combinations.spec.ts tests/workload/edit-edge.spec.ts tests/workload/edit-scope.spec.ts",
+    "test:filters": "playwright test --project=workload tests/workload/filter-panel.spec.ts tests/workload/filter-user-resource.spec.ts tests/workload/filter-workload.spec.ts tests/workload/filter-projects.spec.ts tests/workload/filter-task.spec.ts tests/workload/filter-custom-fields.spec.ts tests/workload/filter-saved-views.spec.ts tests/workload/filter-combinations.spec.ts tests/workload/filter-toolbar.spec.ts tests/workload/filter-edge-values.spec.ts tests/workload/filter-oracles.spec.ts tests/workload/filter-project.spec.ts tests/workload/filter-permissions.spec.ts tests/workload/filter-export.spec.ts",
+    "test:views": "playwright test --project=workload tests/workload/views-favourite-refresh.spec.ts tests/workload/default-views.spec.ts tests/workload/default-views-edge.spec.ts tests/workload/default-views-actions.spec.ts",
+    "auth:portals": "node scripts/parallel.mjs auth",
+    "seed": "node scripts/parallel.mjs seed",
+    "test:parallel": "node scripts/parallel.mjs test",
+    "test:mirror": "node scripts/parallel.mjs mirror",
+    "inventory": "playwright test --project=tools tests/tools/portal-probe.spec.ts",
+    "test:create": "playwright test --project=workload tests/workload/create-view.spec.ts tests/workload/create-view-criteria.spec.ts tests/workload/create-view-edge.spec.ts",
+    "test:shard": "node scripts/parallel.mjs shard"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1",
     "@types/node": "^22.0.0",
     "dotenv": "16.4.5",
     "mysql2": "^3.24.5",
+    "pdf-parse": "^1.1.1",
     "typescript": "5.6.3"
   }
 }

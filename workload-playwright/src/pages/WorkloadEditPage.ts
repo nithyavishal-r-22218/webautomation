@@ -68,7 +68,10 @@ export class WorkloadEditPage {
   async setShowOption(name: 'Task Title' | 'Project Title', on: boolean) {
     await this.tab('Report Preference');
     const cb = this.page.locator(CSS.checkbox).filter({ hasText: name }).filter({ visible: true });
-    if ((await cb.getAttribute('rc-checked')) !== String(on)) await cb.click();
+    // The rc-checked attribute can be an unrendered template ("{{dummy}}"); the ruc-checked class is the state.
+    const checked = await cb.evaluate(e => /\bruc-checked\b/.test(e.className) || e.getAttribute('rc-checked') === 'true');
+    if (checked !== on) await cb.click();
+    await expect.poll(() => cb.evaluate(e => /\bruc-checked\b/.test(e.className)), { message: `${name} ${on ? 'ticked' : 'cleared'}` }).toBe(on);
   }
 
   /** The custom range input (value "<date> to <date>" in the UI's date order). */
@@ -158,7 +161,7 @@ export class WorkloadEditPage {
         .map(s => (s.querySelector('.zselectbox__text') as HTMLElement | null)?.innerText.trim() ?? '');
       const range = [...document.querySelectorAll('input')].filter(i => vis(i) && /\d{2}-\d{2}-\d{4}/.test(i.value)).map(i => i.value)[0];
       const checks = Object.fromEntries([...document.querySelectorAll('ruc-checkbox')].filter(vis)
-        .map(c => [(c as HTMLElement).innerText.trim(), c.getAttribute('rc-checked') === 'true']));
+        .map(c => [(c as HTMLElement).innerText.trim(), /\bruc-checked\b/.test(c.className) || c.getAttribute('rc-checked') === 'true']));
       return { radios, selects, range, checks };
     });
     await this.tab('Time Period');

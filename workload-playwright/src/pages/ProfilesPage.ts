@@ -41,8 +41,8 @@ export class ProfilesPage {
     return this.page.locator(`input[data-zpqa="input_profile_checkbox_${profileId}_workloadreport_${perm}"]`)
       .filter({ visible: true }).locator('xpath=ancestor::ruc-checkbox[1]');
   }
-  /** The native input reports checked=false even when ticked: the wrapper's rc-checked is the truth. */
-  async isTicked(profileId: string, perm: Perm) { return (await this.box(profileId, perm).getAttribute('rc-checked')) === 'true'; }
+  /** The native input reports checked=false even when ticked: the wrapper's ruc-checked class (or rc-checked="true") is the truth. */
+  async isTicked(profileId: string, perm: Perm) { return this.box(profileId, perm).evaluate(e => /\bruc-checked\b/.test(e.className) || e.getAttribute('rc-checked') === 'true'); }
 
   async set(profileId: string, perm: Perm, on: boolean) {
     if (process.env.ZP_ALLOW_PROFILE_CHANGES !== '1') throw new Error('Profile changes need ZP_ALLOW_PROFILE_CHANGES=1 (explicit approval)');

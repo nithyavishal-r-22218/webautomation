@@ -18,6 +18,14 @@ export const K = {
   calNext: 'cal_right_arrow',
   chartType: 'kanban_changecv',
   filter: 'filter',
+  // Filter panel (confirmed live 09-10-2026)
+  filterFind: 'resourceutil_filter_find',
+  filterCancel: 'resourceutil_filter_cancel',
+  filterReset: 'resourceutil_reset_filter',
+  filterClear: 'resourceutil_filter_clear',            // "Clear filter" next to the toolbar chips
+  filterResourceType: 'resourceutil_fltcheck_resourcetype', // User/Resource section header
+  filterResourceTypeCondition: 'resourceutil_selcondiv_resourcetype', // Is / Is Not
+  filterResourceTypeValuePrefix: 'resourceutil_resourcetype_', // + 1 (Users) or 6 (Resources): the <label>; state on input#resourcetype_<n>
   groupBy: 'group-by-nav-item',
   dataLabel: 'data-label-select',
   fullscreen: 'workload-report-fullscreen',

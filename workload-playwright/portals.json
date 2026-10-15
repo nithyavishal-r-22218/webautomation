@@ -1,0 +1,23 @@
+{
+  "_comment": "Portals for parallel runs (scripts/parallel.mjs). source = the portal whose data the others are seeded from. Per portal: env overrides; only/skip = regexes on spec paths that portal may take. Defaults for a portal p: ZP_PORTAL=p, ZP_ADMIN_STATE=auth/p/admin.json, ZP_AUTH_DIR=auth/p, ZP_REPORTS_DIR=reports/p, ZP_OUTPUT_DIR=test-results/p; project ids come from reports/p/portal-settings.json (written by the seed).",
+  "source": "customworkload",
+  "portals": {
+    "customworkload": {
+      "env": {
+        "ZP_ADMIN_STATE": "auth/admin.json",
+        "ZP_AUTH_DIR": "auth",
+        "ZP_REPORTS_DIR": "reports",
+        "ZP_OUTPUT_DIR": "test-results/customworkload"
+      }
+    },
+    "customworkload2": {
+      "env": {}
+    },
+    "auto": {
+      "env": {}
+    },
+    "auto2": {
+      "env": {}
+    }
+  }
+}

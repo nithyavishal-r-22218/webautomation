@@ -3,6 +3,7 @@ import { CSS, K, qa, qaStarts } from '../locators';
 import { Discovery } from '../discover';
 import { env, reportsUrl } from '../env';
 import { parseShown, setDateOrder, detectDateOrder, type Range } from '../dates';
+import { waitForApiBudget } from '../rate';
 
 export type ViewGroup = 'Favorite Views' | 'Predefined Views' | 'My Custom Views' | 'Shared Views' | string;
 
@@ -37,6 +38,7 @@ export async function dismissPromos(page: Page) {
  */
 export async function openReports(page: Page) {
   await dismissPromos(page);
+  await waitForApiBudget(12); // a Reports load sends ~10 portal API calls
   // Already inside Reports: a same-URL goto in this single-page app sends no requests, so a fresh Discovery would
   // never see the portal ID, views or meta — reload instead.
   if (page.url().startsWith(reportsUrl())) await page.reload();
@@ -44,7 +46,8 @@ export async function openReports(page: Page) {
   const tab = qa(page, K.workloadTab);
   if (!(await tab.waitFor({ timeout: 15_000 }).then(() => true, () => false)))
     await page.getByRole('menuitem', { name: /Reports/ }).first().click({ timeout: 10_000 });
-  await expect(tab, 'Reports page with the Workload tab').toBeVisible({ timeout: 60_000 });
+  // 150 s: the page's requests may be held up to a full 2-minute window by the API budget (src/rate.ts)
+  await expect(tab, 'Reports page with the Workload tab').toBeVisible({ timeout: 150_000 });
 }
 
 export class WorkloadPage {
@@ -55,7 +58,8 @@ export class WorkloadPage {
     await openReports(this.page);
     await qa(this.page, K.workloadTab).click();
     await this.d.ready();
-    await expect(qa(this.page, K.calendar)).toBeVisible();
+    // 150 s: after a heavy step the page's own requests can be held by the API budget (src/rate.ts) for a full window
+    await expect(qa(this.page, K.calendar)).toBeVisible({ timeout: 150_000 });
     setDateOrder(env.dateOrder || detectDateOrder(await qa(this.page, K.calendar).innerText()));
   }
 
@@ -81,7 +85,7 @@ export class WorkloadPage {
     this.d.resetOwners();
     // Picking the view that is already open sends no data request: reload it with the toolbar refresh instead
     if (this.d.meta?.custom_view_id === id) { await this.refresh(); return; }
-    const loaded = this.page.waitForResponse(r => /\/reports\/workload\?/.test(r.url()) && r.url().includes(`view_id=${id}`));
+    const loaded = this.page.waitForResponse(r => /\/reports\/workload\?/.test(r.url()) && r.url().includes(`view_id=${id}`), { timeout: 150_000 });
     await this.openViews();
     await this.viewItem(group, name).click();
     await loaded;
@@ -132,9 +136,9 @@ export class WorkloadPage {
     return resp;
   }
   async refresh() {
-    const data = this.page.waitForResponse(r => /\/reports\/workload\?/.test(r.url()) && /[?&]index=1&/.test(r.url()));
-    const meta = this.page.waitForResponse(r => r.url().includes('/reports/workload/meta'));
-    const views = this.page.waitForResponse(r => r.url().includes('/user-views?module=workload'));
+    const data = this.page.waitForResponse(r => /\/reports\/workload\?/.test(r.url()) && /[?&]index=1&/.test(r.url()), { timeout: 150_000 });
+    const meta = this.page.waitForResponse(r => r.url().includes('/reports/workload/meta'), { timeout: 150_000 });
+    const views = this.page.waitForResponse(r => r.url().includes('/user-views?module=workload'), { timeout: 150_000 });
     await (await toolbarIcon(this.page, K.refresh)).click();
     return Promise.all([data, meta, views]);
   }
@@ -163,7 +167,7 @@ export class WorkloadPage {
 
   /** Toolbar period arrows. Each makes the view "dirty" (red dot + Save as) until saved or discarded. */
   async step(dir: 'next' | 'prev') {
-    const data = this.page.waitForResponse(r => /\/reports\/workload\?/.test(r.url()) && /[?&]index=1&/.test(r.url()) && !r.url().includes('fetch_unassignee=true'));
+    const data = this.page.waitForResponse(r => /\/reports\/workload\?/.test(r.url()) && /[?&]index=1&/.test(r.url()) && !r.url().includes('fetch_unassignee=true'), { timeout: 150_000 });
     await qa(this.page, dir === 'next' ? K.calNext : K.calPrev).click();
     return data;
   }
@@ -179,6 +183,13 @@ export class WorkloadPage {
   async discard() {
     await qa(this.page, K.saveAs).click();
     await qa(this.page, K.discard).click();
-    await expect(qa(this.page, K.saveAs)).toBeHidden();
+    // the unsaved marker (* on the view name) is the ground truth: for some profiles the Save as element stays in the
+    // DOM after Discard although the change is gone (seen 13-10-2026 with the CP profile)
+    // only VISIBLE toolbar elements count: some profiles' pages keep a hidden toolbar skeleton with stale state (13-10-2026)
+    await expect.poll(async () => {
+      const saveAsShown = await qa(this.page, K.saveAs).filter({ visible: true }).count();
+      const names = await qa(this.page, K.viewDropdown).filter({ visible: true }).allInnerTexts();
+      return saveAsShown === 0 || names.every(n => !n.includes('*'));
+    }, { message: 'toolbar change discarded', timeout: 60_000 }).toBe(true);
   }
 }

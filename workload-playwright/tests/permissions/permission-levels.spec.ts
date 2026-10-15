@@ -43,7 +43,7 @@ type Side = { api: ZpApi; ctx: BrowserContext; page: Page };
 let admin: Side, user: Side;
 let profileId = '', projectId = '';
 const snapshot: Partial<Record<Scope, WlAction[]>> = {};
-const SNAPSHOT_FILE = `reports/perm-snapshot-${PROFILE}.json`; // removed once the profile is restored and read back
+const SNAPSHOT_FILE = `${env.reportsDir}/perm-snapshot-${PROFILE}.json`; // removed once the profile is restored and read back
 const SEED = `${env.runId}-admin-shared`;   // Admin-owned view shared with all users
 const OWN = `${env.runId}-user-own`;        // view owned by the user under test (UI menu checks)
 const THROWAWAY = `${env.runId}-user-tmp`;  // owned by the user, used for API delete attempts

@@ -12,13 +12,17 @@ import { ZpApi } from '../../src/api';
  * Second user: ZP_SCOPE_USER_STATE (or ZP_PERM_USER_STATE) — any user who can open the report.
  */
 const USER_STATE = process.env.ZP_SCOPE_USER_STATE || process.env.ZP_PERM_USER_STATE || '';
-test.describe.configure({ mode: 'serial' });
+// Not serial: every case sets what it checks, so one failure must not skip the rest. workers=1 keeps the
+// order; preserveViewSettings() reuses the saved original snapshot if a new worker starts after a failure.
+test.describe.configure({ mode: 'default' });
 preserveViewSettings();
 test.skip(!stateExists(USER_STATE), 'needs ZP_SCOPE_USER_STATE (a second user who can open the report)');
 
 test('SCOPE-01 an Admin edit of view type and description: does another user see it?', async ({ wl, edit, browser }) => {
   const viewId = wl.d.meta!.custom_view_id;
   const user = await ZpApi.open(browser, USER_STATE);
+  const probe = await user.api.call('GET', `/reports/workload/meta?project_id=0&view_id=${viewId}`);
+  if (probe.status() !== 200) { await user.ctx.close(); test.skip(true, `the second user cannot open the report (meta ${probe.status()}): give their profile Workload View or use another login`); }
   const userMeta = async () => (await user.api.getJson<{ chart_details?: Record<string, unknown> }>(`/reports/workload/meta?project_id=0&view_id=${viewId}`)).chart_details ?? {};
   const before = await userMeta();
 

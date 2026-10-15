@@ -6,6 +6,10 @@ export const env = {
   baseUrl: (process.env.ZP_BASE_URL ?? '').replace(/\/$/, ''),
   portal: process.env.ZP_PORTAL ?? '',
   adminState: process.env.ZP_ADMIN_STATE ?? 'auth/admin.json',
+  /** Where specs write snapshots, exports, screenshots and the reporters write results. One folder per portal in a parallel run. */
+  reportsDir: process.env.ZP_REPORTS_DIR || 'reports',
+  /** Where cached OAuth tokens live (one Admin per portal, so one folder per portal in a parallel run). */
+  authDir: process.env.ZP_AUTH_DIR || 'auth',
   userStates: parseJson<Record<string, string>>(process.env.ZP_USER_STATES, {}),
   authTargets: (process.env.ZP_AUTH_TARGETS ?? 'admin').split(',').map(s => s.trim()).filter(Boolean),
   runId: process.env.RUN_ID || `QA-WL-${new Date().toISOString().replace(/[-:T]/g, '').slice(0, 12)}`,

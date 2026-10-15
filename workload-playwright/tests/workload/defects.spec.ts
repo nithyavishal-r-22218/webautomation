@@ -4,7 +4,9 @@ import { env } from '../../src/env';
 import { expectedRange, headerText, fmt, daysInclusive, availableHours, holidaysFromMeta, parseMDY, shown, type Range } from '../../src/dates';
 
 /** Regression checks for the defects found on 8 Oct 2026. Tagged @defect: `npm run test:defects`. */
-test.describe.configure({ mode: 'serial' });
+// Not serial: every case sets what it checks, so one failure must not skip the rest. workers=1 keeps the
+// order; preserveViewSettings() reuses the saved original snapshot if a new worker starts after a failure.
+test.describe.configure({ mode: 'default' });
 preserveViewSettings();
 
 const today = new Date();

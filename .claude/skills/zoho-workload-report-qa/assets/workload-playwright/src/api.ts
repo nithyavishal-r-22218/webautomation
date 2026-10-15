@@ -2,6 +2,7 @@ import { expect, type APIResponse, type Browser, type BrowserContext, type Page 
 import { Discovery, type UserView } from './discover';
 import { K, qa } from './locators';
 import { reportsUrl } from './env';
+import { noteApiCall, trackContext, waitForApiBudget } from './rate';
 
 /**
  * API client that acts as the user of a browser context.
@@ -55,6 +56,7 @@ export class ZpApi {
   /** New context for a saved login, opened on the Workload Report so the app has made authenticated calls. */
   static async open(browser: Browser, storageState: string): Promise<{ api: ZpApi; ctx: BrowserContext; page: Page }> {
     const ctx = await browser.newContext({ storageState });
+    await trackContext(ctx); await waitForApiBudget(12);
     const page = await ctx.newPage();
     const d = new Discovery(page);
     // Only the portal ID and an app request are needed, so no waiting for Reports: a profile without report rights
@@ -71,27 +73,54 @@ export class ZpApi {
     for (const [k, v] of Object.entries(src)) if (!/^(cookie|content-length|content-type|host|:)/i.test(k)) h[k] = v;
     return h;
   }
-  private url(path: string) { return `${new URL(this.page.url()).origin}/api/v3/portal/${this.d.portalId}${path}`; }
+  /** `/api/v3.1/…` paths (e.g. PATCH /users) are passed as 'v3.1:/users/…'. */
+  private url(path: string) { const m = path.match(/^(v3(?:\.\d)?):(.*)$/); return `${new URL(this.page.url()).origin}/api/${m ? m[1] : 'v3'}/portal/${this.d.portalId}${m ? m[2] : path}`; }
 
   /** Paced per API; a THROTTLES_LIMIT_EXCEEDED answer is retried after 30 s, up to 3 times (Java suite's withThrottleRetry). */
   async call(method: 'GET' | 'PUT' | 'POST' | 'PATCH' | 'DELETE', path: string, data?: unknown): Promise<APIResponse> {
     const headers = await this.headers();
     if (data !== undefined) headers['content-type'] = 'application/json';
     for (let attempt = 0; ; attempt++) {
-      await pace(method, path);
-      const r = await this.page.request.fetch(this.url(path), { method, headers, data: data === undefined ? undefined : JSON.stringify(data) });
+      await pace(method, path); await waitForApiBudget(); noteApiCall();
+      const r = await this.fetchResilient(method, path, headers, data === undefined ? undefined : JSON.stringify(data));
       if (attempt >= 3 || !(await isThrottled(r))) return r;
       await new Promise(res => setTimeout(res, 30_000));
     }
   }
+  /**
+   * Node's TLS socket can be refused by a local proxy in front of the portal (seen 12-10-2026: "tlsv13 alert
+   * certificate required" / UND_ERR_SOCKET while Chromium and curl still connect). Then the call is made from inside
+   * the page with the app's own CSRF header, and wrapped so callers still get an APIResponse-like object.
+   */
+  private async fetchResilient(method: string, path: string, headers: Record<string, string>, body?: string): Promise<APIResponse> {
+    try {
+      return await this.page.request.fetch(this.url(path), { method, headers, data: body });
+    } catch (e) {
+      if (!/SSL|TLS|socket|ECONNRESET|EPROTO|certificate/i.test(String(e))) throw e;
+      if (!ZpApi.inPageNoted) { ZpApi.inPageNoted = true; console.log(`[api] Node request failed (${String(e).split('\n')[0].slice(0, 90)}); using in-page fetch from now on`); }
+      const res = await this.page.evaluate(async ({ url, method, body, extra }) => {
+        const w = window as any;
+        // one CSRF header only: the app's helpers first, else the one the app sent last (a duplicate header doubles the token → 400 MORE_THAN_MAX_LENGTH)
+        const h: Record<string, string> = { ...extra };
+        try { if (typeof w.getZPCSRFName === 'function') h['x-zcsrf-token'] = `${w.getZPCSRFName()}=${w.getZPCSRFValue()}`; } catch { /* keep the copied token */ }
+        const r = await fetch(url, { method, headers: h, body, credentials: 'include' });
+        const text = await r.text();
+        return { status: r.status, statusText: r.statusText, text, headers: Object.fromEntries([...r.headers.entries()]) };
+      }, { url: this.url(path), method, body, extra: Object.fromEntries(Object.entries(headers).filter(([k]) => /^(content-type|x-zcsrf-token|accept)$/i.test(k)).map(([k, v]) => [k.toLowerCase(), v])) });
+      return inPageResponse(this.url(path), res);
+    }
+  }
+  private static inPageNoted = false;
   /** Form-encoded body (e.g. /projectusers rejects JSON). */
   async callForm(method: 'POST' | 'PUT' | 'PATCH', path: string, form: Record<string, string>): Promise<APIResponse> {
-    return this.page.request.fetch(this.url(path), { method, headers: await this.headers(), form });
+    await waitForApiBudget(); noteApiCall();
+    const headers = { ...(await this.headers()), 'content-type': 'application/x-www-form-urlencoded' };
+    return this.fetchResilient(method, path, headers, new URLSearchParams(form).toString());
   }
   async json<T = any>(r: APIResponse): Promise<T> { try { return await r.json(); } catch { return {} as T; } }
   async getJson<T = any>(path: string): Promise<T> {
     const r = await this.call('GET', path);
-    expect(r.status(), `GET ${path.split('?')[0]}`).toBe(200);
+    if (r.status() !== 200) expect(r.status(), `GET ${path.split('?')[0]} → ${r.status()} ${(await r.text().catch(() => '')).slice(0, 200)}`).toBe(200);
     return this.json<T>(r);
   }
 
@@ -148,6 +177,22 @@ export class ZpApi {
   }
   /** PUT /reports/custom-workload — create when no id, update with id. 201 create, 200 update, 403 when not allowed. */
   saveView(body: Record<string, unknown>) { return this.call('PUT', '/reports/custom-workload', { module: 'workload', ...body }); }
+  /** Saved definition of a view: description, view_period, report_preference, determiner, group_by. */
+  view(id: string) { return this.getJson<Record<string, any>>(`/views/${id}?module=workload`); }
+  /** Create a custom Workload view with the signed-in session (same body as OAuthApi.createView). Returns the id. */
+  async createView(name: string, o: { description?: string; shared?: boolean; determiner?: { pattern: string; criteria: { field_name: string; condition: string; value: string[] }[] } } = {}): Promise<string> {
+    const r = await this.saveView({
+      name, description: o.description ?? '',
+      view_access_type: o.shared ? 'public' : 'only_to_me', shared_users: [],
+      project_access_type: o.shared ? 'all_projects' : 'specific_project', shared_projects: [],
+      report_preference: { report_based_on: 'users', bar_type: 'gantt', legend: 'nolegend', view_type: 'heatmap' },
+      view_period: { time_period: 'days', time_period_type: 'relative', relative_time_period: 'current_month' },
+      ...(o.determiner ? { determiner: o.determiner } : {}),
+      is_globally_accessible: true, group_by: [{ field_name: 'users', sort_by: 'asc', module: 'workload' }],
+    });
+    expect(r.status(), `create view "${name}": ${(await r.text()).slice(0, 200)}`).toBe(201);
+    return String((await r.json()).id);
+  }
   /** Delete a custom workload view (pass viewId(v)). Internal endpoint: DELETE /views/{id}?module=workload → 204; 401 when not allowed. */
   deleteView(id: string) { return this.call('DELETE', `/views/${id}?module=workload`); }
   /**
@@ -163,12 +208,12 @@ export class ZpApi {
 
   // ---------- workload data ----------
   /** All owners for a range (pages of 15), plus the Unassigned row when unassigned=true. Dates: ISO day strings. */
-  async workload(o: { projectId?: string; from: string; to: string; timePeriod?: 'days' | 'weeks' | 'months'; viewId?: string; unassigned?: boolean }): Promise<Owner[]> {
+  async workload(o: { projectId?: string; from: string; to: string; timePeriod?: 'days' | 'weeks' | 'months'; viewId?: string; unassigned?: boolean; basedOn?: 'users' | 'teams' }): Promise<Owner[]> {
     const owners: Owner[] = [];
     for (let index = 1, more = true; more; index += 15) {
       const q = new URLSearchParams({
         project_id: o.projectId ?? '0', from_date: `${o.from}T00:00:00.000Z`, to_date: `${o.to}T23:59:59.999Z`,
-        time_period: o.timePeriod ?? 'days', report_based_on: 'users', index: String(index), range: '15',
+        time_period: o.timePeriod ?? 'days', report_based_on: o.basedOn ?? 'users', index: String(index), range: '15',
         ...(o.viewId ? { view_id: o.viewId } : {}), ...(o.unassigned ? { fetch_unassignee: 'true' } : {}),
       });
       const j = await this.getJson<{ owners?: Owner[]; page_info?: { has_next?: boolean } }>(`/reports/workload?${q}`);
@@ -176,6 +221,42 @@ export class ZpApi {
       more = !o.unassigned && !!j.page_info?.has_next;
     }
     return owners;
+  }
+
+  // ---------- users / teams (reversible changes for the default-views edge cases) ----------
+  /** Teams a user belongs to (names and ids). */
+  async userTeams(userId: string): Promise<{ id: string; name: string }[]> {
+    return ((await this.getJson<{ teams?: any[] }>(`/users/${userId}/teams`)).teams ?? []).map(t => ({ id: String(t.id), name: String(t.name) }));
+  }
+  /** PATCH /teams/{id} {user_ids:{add|remove:[userId]}} (documented in the internal API reference). */
+  async teamMembers(teamId: string, change: 'add' | 'remove', userIds: string[]) {
+    const r = await this.call('PATCH', `/teams/${teamId}`, { user_ids: { [change]: userIds } });
+    expect([200, 204], `team ${change} ${userIds}: ${(await r.text()).slice(0, 200)}`).toContain(r.status());
+  }
+  /** Teams with their lead's id. */
+  async teams(): Promise<{ id: string; name: string; lead: string }[]> {
+    return ((await this.getJson<{ teams?: any[] }>('/teams?page=1&per_page=200')).teams ?? []).map(t => ({ id: String(t.id), name: String(t.name), lead: String(t.lead?.zpuid ?? t.lead?.id ?? '') }));
+  }
+  /** PATCH /teams/{id} {lead: zpuid}. */
+  async setTeamLead(teamId: string, userId: string) {
+    const r = await this.call('PATCH', `/teams/${teamId}`, { lead: userId });
+    expect([200, 204], `team ${teamId} lead → ${userId}: ${(await r.text()).slice(0, 200)}`).toContain(r.status());
+  }
+  /** PATCH /api/v3.1/users/{zpuid} {reporting_to:{id}}. */
+  async setReportingTo(userId: string, managerId: string) {
+    const r = await this.call('PATCH', `v3.1:/users/${userId}`, { reporting_to: { id: managerId } });
+    expect([200, 204], `reporting_to ${userId} → ${managerId}: ${(await r.text()).slice(0, 200)}`).toContain(r.status());
+  }
+  async reportingTo(userId: string): Promise<string> {
+    const u = (await this.users()).find(x => String(x.id) === userId);
+    return String(u?.reporting_to?.zpuid ?? u?.reporting_to?.id ?? '');
+  }
+  /** POST /projects/{id}/tasks with one owner at a fixed time per day (body confirmed live 13-10-2026). */
+  async createTask(projectId: string, o: { name: string; start: string; end: string; ownerId: string; perDay: string }) {
+    const r = await this.call('POST', `/projects/${projectId}/tasks`, { name: o.name, start_date: o.start, end_date: o.end,
+      owners_and_work: { work_type: 'standard', unit: 'hours_per_day', owners: [{ zpuid: o.ownerId, work_values: o.perDay }] } });
+    expect(r.status(), `create task: ${(await r.text()).slice(0, 200)}`).toBe(201);
+    return this.json<{ id: string }>(r);
   }
 
   // ---------- projects / tasks ----------
@@ -209,4 +290,16 @@ export class ZpApi {
     expect(r.status(), 'POST /projects/{id}/trash').toBe(204);
     expect((await this.call('GET', `/projects/${projectId}`)).status(), 'project is trashed').toBe(410);
   }
+}
+
+
+/** Minimal APIResponse over an in-page fetch result (status, text, json, ok, headers, url). */
+function inPageResponse(url: string, r: { status: number; statusText: string; text: string; headers: Record<string, string> }): APIResponse {
+  const o = {
+    url: () => url, status: () => r.status, statusText: () => r.statusText, ok: () => r.status >= 200 && r.status < 300,
+    headers: () => r.headers, headersArray: () => Object.entries(r.headers).map(([name, value]) => ({ name, value })),
+    text: async () => r.text, json: async () => JSON.parse(r.text), body: async () => Buffer.from(r.text),
+    dispose: async () => {}, [Symbol.asyncDispose]: async () => {},
+  };
+  return o as unknown as APIResponse;
 }

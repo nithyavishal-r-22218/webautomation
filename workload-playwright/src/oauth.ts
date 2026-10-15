@@ -3,6 +3,7 @@ import { expect, request, type APIRequestContext, type APIResponse } from '@play
 import { env } from './env';
 import { account } from './accountDb';
 import { pace, isThrottled, assertSafePrefix, viewId } from './api';
+import { noteApiCall, waitForApiBudget } from './rate';
 import { viewLabel, type UserView } from './discover';
 
 /**
@@ -18,13 +19,13 @@ import { viewLabel, type UserView } from './discover';
  */
 interface CachedToken { token: string; portalId: string; expires: number }
 
-const tokenFile = (target: string) => `auth/oauth.${target}.json`;
+const tokenFile = (target: string) => `${env.authDir}/oauth.${target}.json`;
 
 async function accessToken(ctx: APIRequestContext, target: string, force = false): Promise<CachedToken> {
   if (!force) {
     try {
       const c = JSON.parse(fs.readFileSync(tokenFile(target), 'utf8')) as CachedToken;
-      if (c.token && c.portalId && c.expires > Date.now() + 60_000) return c;
+      if (c.token && c.portalId && c.expires > Date.now() + 60_000) return process.env.ZP_PORTAL_ID ? { ...c, portalId: process.env.ZP_PORTAL_ID } : c;
     } catch { /* no usable cache */ }
   }
   const acc = await account(target);
@@ -36,8 +37,9 @@ async function accessToken(ctx: APIRequestContext, target: string, force = false
   });
   const j = await r.json().catch(() => ({})) as { access_token?: string; expires_in?: number; error?: string };
   if (!r.ok() || !j.access_token) throw new Error(`OAuth token refresh failed for "${target}": HTTP ${r.status()} ${j.error ?? ''}`.trim());
-  const c: CachedToken = { token: j.access_token, portalId: acc.portalId, expires: Date.now() + (j.expires_in ?? 3600) * 1000 };
-  fs.mkdirSync('auth', { recursive: true });
+  // ZP_PORTAL_ID overrides the DB row's portalID (a row copied from another portal carries the wrong id; seen for auto2 on 14-10-2026)
+  const c: CachedToken = { token: j.access_token, portalId: process.env.ZP_PORTAL_ID || acc.portalId, expires: Date.now() + (j.expires_in ?? 3600) * 1000 };
+  fs.mkdirSync(env.authDir, { recursive: true });
   fs.writeFileSync(tokenFile(target), JSON.stringify(c), { mode: 0o600 });
   return c;
 }
@@ -69,7 +71,7 @@ export class OAuthApi {
   async call(method: 'GET' | 'PUT' | 'POST' | 'PATCH' | 'DELETE', path: string, data?: unknown): Promise<APIResponse> {
     let refreshed = false;
     for (let attempt = 0; ; attempt++) {
-      await pace(method, path);
+      await pace(method, path); await waitForApiBudget(); noteApiCall();
       const headers: Record<string, string> = { Authorization: `Bearer ${this.tok.token}` };
       if (data !== undefined) headers['content-type'] = 'application/json';
       const r = await this.ctx.fetch(this.url(path), { method, headers, data: data === undefined ? undefined : JSON.stringify(data) });
