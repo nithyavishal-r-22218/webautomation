@@ -147,7 +147,7 @@ export class WorkloadPage {
   /** Project-level Workload Report (Project › Reports). Same toolbar keys as the global report. */
   async gotoProject(projectId: string) {
     await this.page.goto(`${env.baseUrl}/portal/${env.portal}#zp/projects/${projectId}/reports`);
-    await expect(qa(this.page, K.calendar)).toBeVisible();
+    await expect(qa(this.page, K.calendar)).toBeVisible({ timeout: 90_000 }); // a cold project page can take a while
   }
 
   /** data-zpqa keys of the items in the open ••• menu, e.g. ['edit_customview','copylink_customview',…]. */

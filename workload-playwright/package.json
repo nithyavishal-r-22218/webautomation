@@ -23,8 +23,17 @@
     "test:parallel": "node scripts/parallel.mjs test",
     "test:mirror": "node scripts/parallel.mjs mirror",
     "inventory": "playwright test --project=tools tests/tools/portal-probe.spec.ts",
-    "test:create": "playwright test --project=workload tests/workload/create-view.spec.ts tests/workload/create-view-criteria.spec.ts tests/workload/create-view-edge.spec.ts",
-    "test:shard": "node scripts/parallel.mjs shard"
+    "test:create": "playwright test --project=workload tests/workload/create-view.spec.ts tests/workload/create-view-criteria.spec.ts tests/workload/create-view-edge.spec.ts tests/workload/create-view-share.spec.ts",
+    "test:shard": "node scripts/parallel.mjs shard",
+    "runner": "node scripts/runner-server.mjs",
+    "start": "node scripts/runner-server.mjs",
+    "test:ui": "playwright test --project=workload tests/workload/grid-interactions.spec.ts tests/workload/rail-toolbar.spec.ts tests/workload/view-menu.spec.ts tests/workload/project-level.spec.ts",
+    "test:settings": "ZP_ALLOW_SETTINGS_CHANGES=1 playwright test --project=workload tests/workload/portal-settings.spec.ts",
+    "restore:hours": "playwright test --project=tools tests/tools/restore-hours.spec.ts",
+    "user:activate": "playwright test --project=tools tests/tools/reactivate.spec.ts",
+    "portal:timezone": "playwright test --project=tools tests/tools/portal-timezone.spec.ts",
+    "test:env": "ZP_ALLOW_SETTINGS_CHANGES=1 ZP_ALLOW_USER_CHANGES=1 playwright test --project=workload tests/workload/portal-timezone.spec.ts tests/workload/user-deactivation.spec.ts tests/workload/performance.spec.ts",
+    "work:dump": "playwright test --project=tools tests/tools/dump-work.spec.ts"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1",
@@ -33,5 +42,8 @@
     "mysql2": "^3.24.5",
     "pdf-parse": "^1.1.1",
     "typescript": "5.6.3"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
   }
 }

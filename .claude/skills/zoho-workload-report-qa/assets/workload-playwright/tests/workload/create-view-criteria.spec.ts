@@ -1,11 +1,12 @@
 import { test, expect, knownDefect } from '../../src/fixtures';
 import { ZpApi } from '../../src/api';
+import { USER_LEVEL } from '../../src/createChecks';
 import { env } from '../../src/env';
 import { K, qa } from '../../src/locators';
 import { CreateViewPage } from '../../src/pages/CreateViewPage';
 import type { WorkloadPage } from '../../src/pages/WorkloadPage';
 import {
-  fillCriterion, leaveToAllUsers, checkData, checkDefinition, checkOpened, checkPartition, checkReopened, createCase, ownersOf, removeView, valueKind,
+  baselineOf, canon, ensureReport, fillCriterion, leaveToAllUsers, checkData, checkDefinition, checkOpened, checkPartition, checkReopened, createCase, ownersOf, removeView, valueKind,
   type Built, type CaseSpec, type Crit, type OwnerWork, type ValueKind,
 } from '../../src/createChecks';
 
@@ -75,6 +76,7 @@ function critFor(field: string, c: Cond, s: { taskName: string }): Crit | null {
   const base: Crit = { field, condition: c.label, kind: c.kind };
   switch (c.kind) {
     case 'list': return c.options.length ? { ...base, values: [c.options[0]!] } : null;
+    case 'select': return { ...base, values: c.options.length ? [c.options[0]!] : [] };
     case 'text': {
       if (field !== 'Task Name') return { ...base, text: ['QA'] };
       const t = s.taskName;
@@ -95,7 +97,27 @@ async function allUsers(wl: WorkloadPage) {
   return (allUsersId = String(v.custom_view_id || v.id));
 }
 
-/** Create one view per condition of the field and apply the field's rules. */
+/** Generic data rules shared by the UI and the API path: every owner is an All Users owner, never with more work. */
+function dataRules(name: string, owners: Map<string, OwnerWork>, base: Map<string, OwnerWork>, fieldCode: string) {
+  for (const o of owners.values()) {
+    const ref = base.get(o.id);
+    expect.soft(!!ref, `${name}: ${o.name} is an All Users owner`).toBe(true);
+    if (ref) expect.soft(o.work, `${name}: ${o.name} work ≤ All Users work`).toBeLessThanOrEqual(ref.work);
+    if (ref && USER_LEVEL.has(fieldCode)) expect.soft(o.work, `${name}: user-level criterion keeps ${o.name}'s whole work`).toBe(ref.work);
+  }
+  const total = [...owners.values()].reduce((a, o) => a + o.work, 0);
+  test.info().annotations.push({ type: 'data', description: `${name}: ${owners.size} owners, ${Math.round(total / 60)} h (All Users ${base.size} owners, ${Math.round([...base.values()].reduce((a, o) => a + o.work, 0) / 60)} h)` });
+}
+/** Placeholder values of conditions without a value control, as the form sends them (${ALL_OPEN}, ${TODAY}, …). */
+const placeholderFor = (code: string) => [`\${${code.toUpperCase()}}`];
+const UI_ALL = process.env.ZP_CREATE_UI_ALL === '1';
+
+/**
+ * One view per condition of the field, checked against the field's rules. The form is driven for the FIRST condition
+ * of each value-control kind (list, text, number, date, …) — that proves the control; every other condition of the
+ * same kind is created through the API with the body the form sent, only the condition code (and a placeholder value)
+ * changed, and its data is checked through the API. ZP_CREATE_UI_ALL=1 drives the form for every condition.
+ */
 async function runField(wl: WorkloadPage, field: string) {
   const conds = await conditionsOf(wl, field);
   test.skip(!conds.length, `portal has no "${field}" criteria field`);
@@ -104,34 +126,60 @@ async function runField(wl: WorkloadPage, field: string) {
   const au = await allUsers(wl);
   const api = new ZpApi(wl.page, wl.d);
   const results = new Map<string, { owners: Map<string, OwnerWork>; base: Map<string, OwnerWork>; b: Built }>();
+  const uiBody = new Map<string, Record<string, any>>(); let period: { from: string; to: string } | null = null; let viaApi = 0, viaUi = 0;
+  const metaOf = async (id: string) => { const r = await api.call('GET', `/reports/workload/meta?project_id=0&view_id=${id}`); return { status: r.status(), text: (await r.text().catch(() => '')).slice(0, 300) }; };
+  const metaDefect = (c: Cond, meta: { status: number; text: string }, name: string) => {
+    // 400 = WL-D-36 (e.g. Multi Select › Is Empty); 500 = the server error family of WL-D-22 (e.g. Date › Less Than)
+    if (meta.status >= 500) knownDefect('WL-D-22', `${field} ${c.label}: a view saved with this criterion gets HTTP ${meta.status} from GET /reports/workload/meta and never renders (the toolbar filter has the same server error)`);
+    else knownDefect('WL-D-36', `${field} ${c.label}: saved (201) but GET /reports/workload/meta → ${meta.status}; the view never renders`);
+    test.info().annotations.push({ type: 'evidence', description: `${field} ${c.label}: meta ${meta.status} ${meta.text.slice(0, 160)}` });
+    expect.soft(meta.status, `${name}: the new view loads (meta ${meta.status})`).toBeLessThan(400);
+  };
   for (const [k, c] of conds.entries()) {
     const crit = critFor(field, c, s);
     if (!crit) { test.info().annotations.push({ type: 'skipped', description: `${field} ${c.label}: no value to pick (empty list on this portal)` }); continue; }
+    const template = uiBody.get(c.kind);
+    if (template && period && !UI_ALL) {
+      // ---- API path: the form's own body with this condition
+      await test.step(`${field} ${c.label} (API)`, async () => {
+        const name = `${env.runId}-CVC-${field.replace(/\W+/g, '')}-${c.code}`;
+        const body = JSON.parse(JSON.stringify(template)); body.name = name; body.description = `API-created from the ${c.kind} form body`;
+        const cr = body.determiner.criteria[0]; cr.condition = c.code; if (c.kind === 'none') cr.value = placeholderFor(c.code);
+        let id = '';
+        try {
+          const r = await api.saveView(body);
+          if (r.status() !== 201) { test.info().annotations.push({ type: 'check spec', description: `${field} ${c.label}: the API refuses the form body with this condition → ${r.status()} ${(await r.text()).slice(0, 160)}` }); expect.soft(r.status(), `${name}: created through the API`).toBe(201); return; }
+          id = String((await r.json().catch(() => ({}))).id ?? ''); viaApi++;
+          const def = await api.view(id);
+          expect.soft(canon(def.determiner ?? {}), `${name}: stored criteria = sent`).toBe(canon(body.determiner));
+          const meta = await metaOf(id); if (meta.status >= 400) { metaDefect(c, meta, name); return; }
+          const owners = await ownersOf(api, id, period!.from, period!.to, 'days'); const base = await baselineOf(api, au, period!.from, period!.to, 'days');
+          dataRules(name, owners, base, String(cr.field_name));
+          const b: Built = { spec: { name, criteria: [crit] }, id, body, def, codes: [{ field: String(cr.field_name), condition: c.code }], status: 201 };
+          results.set(c.code, { owners, base, b });
+          await fieldRules(api, field, c, crit, { owners, base }, period!);
+        } finally { if (id) expect.soft([200, 204, 404], `${name} deleted`).toContain((await api.deleteView(id)).status()); }
+      });
+      continue;
+    }
+    // ---- UI path: the first condition of this value-control kind
     await test.step(`${field} ${c.label}`, async () => {
      // one retry per condition when the step throws (a report still loading after 150 s); soft checks never throw
      for (let attempt = 1; attempt <= 2; attempt++) {
       const spec: CaseSpec = { name: `${env.runId}-CVC-${field.replace(/\W+/g, '')}-${c.code}${attempt > 1 ? '-r' : ''}`, criteria: [crit], viewType: 'bar', dataLabel: 'Allocated Hours' };
       let b: Built | undefined;
       try {
-        await wl.goto();
-        b = await createCase(wl, spec);
+        b = await createCase(wl, spec); viaUi++;   // createCase reloads only when the page cannot open the form
         await checkDefinition(api, b);
         const crit0 = (b.body.determiner?.criteria ?? [])[0];
         if (!['none'].includes(c.kind)) expect.soft((crit0?.value ?? []).length, `${spec.name}: the criterion carries a value`).toBeGreaterThan(0);
-        if ((b.meta?.status ?? 200) >= 400) {
-          // saved, but the report cannot load it: recorded (WL-D-36) and the next condition goes on
-          // 400 = WL-D-36 (e.g. Multi Select › Is Empty); 500 = the server error family of WL-D-22 (e.g. Date › Less Than)
-          if (b.meta!.status >= 500) knownDefect('WL-D-22', `${field} ${c.label}: a view saved with this criterion gets HTTP ${b.meta!.status} from GET /reports/workload/meta and never renders (the toolbar filter has the same server error)`);
-          else knownDefect('WL-D-36', `${field} ${c.label}: saved (201) but GET /reports/workload/meta → ${b.meta!.status}; the view never renders`);
-          test.info().annotations.push({ type: 'evidence', description: `${field} ${c.label}: meta ${b.meta!.status} ${b.meta!.text.slice(0, 160)}` });
-          expect.soft(b.meta!.status, `${spec.name}: the new view loads (meta ${b.meta!.status})`).toBeLessThan(400);
-          break;
-        }
-        const period = await checkOpened(wl, b);
-        const r = await checkData(wl, b, period, au);
+        if (crit0) uiBody.set(c.kind, b.body);
+        if ((b.meta?.status ?? 200) >= 400) { metaDefect(c, b.meta!, spec.name); break; }
+        const p = await checkOpened(wl, b); period = period ?? p;
+        const r = await checkData(wl, b, p, au);
         results.set(c.code, { ...r, b });
         if (k === 0) await checkReopened(wl, b);
-        await fieldRules(api, field, c, crit, r, period);
+        await fieldRules(api, field, c, crit, r, p);
         break;
       } catch (e) {
         if (attempt === 2 || /expect\(/.test(String(e)) && !/not found|Timeout/i.test(String(e))) throw e;
@@ -140,6 +188,7 @@ async function runField(wl: WorkloadPage, field: string) {
      }
     });
   }
+  test.info().annotations.push({ type: 'path', description: `${field}: ${viaUi} condition(s) through the form, ${viaApi} through the API` });
   for (const [a, z] of PAIRS) {
     const A = results.get(a), Z = results.get(z);
     // Role applies to users only: resources and the Unassigned row have no role and are in neither half
@@ -207,7 +256,7 @@ test('CVC-M All of these / Any of these with two and three criteria; a removed r
   const run = async (tag: string, spec: Omit<CaseSpec, 'name'>) => {
     const name = `${env.runId}-CVC-M-${tag}`; let b: Built | undefined;
     try {
-      await wl.goto(); b = await createCase(wl, { name, viewType: 'bar', dataLabel: 'Allocated Hours', ...spec });
+      b = await createCase(wl, { name, viewType: 'bar', dataLabel: 'Allocated Hours', ...spec });
       await checkDefinition(api, b); const period = await checkOpened(wl, b);
       return { ...(await checkData(wl, b, period, au)), b };
     } finally { await leaveToAllUsers(wl); await removeView(api, b?.id ?? '', name); }
@@ -238,7 +287,7 @@ test('CVC-M All of these / Any of these with two and three criteria; a removed r
   await test.step('removed row and Clear All', async () => {
     const name = `${env.runId}-CVC-M-clear`; let id = '';
     try {
-      await wl.goto();
+      await ensureReport(wl);
       const cv = new CreateViewPage(wl.page); await cv.open(wl); await cv.setName(name);
       await fillCriterion(cv, 0, A); await fillCriterion(cv, 1, B);
       await cv.removeRow(1);

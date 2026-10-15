@@ -42,8 +42,9 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     viewport: { width: 1366, height: 860 },
-    // Spread UI actions out (ms per action); with the API budget in src/rate.ts this keeps runs under the portal's limit
-    launchOptions: { slowMo: Number(process.env.ZP_SLOW_MO ?? 250) },
+    // Delay per UI action (ms). 50 since 15-10-2026 (was 250): API pacing is done by the budget in src/rate.ts, so a
+    // longer delay only slowed form-heavy cases; set ZP_SLOW_MO=250 to go back
+    launchOptions: { slowMo: Number(process.env.ZP_SLOW_MO ?? 50) },
   },
   projects: [
     { name: 'auth', testMatch: /auth\.setup\.ts/, timeout: 600_000, use: { headless: false } },

@@ -5,10 +5,11 @@ import type { BrowserContext } from '@playwright/test';
  * so EVERY call is counted — the web app's own requests from each browser context and the suite's direct calls
  * (ZpApi, OAuthApi) — in one sliding window per test process (workers=1, so one process).
  *
- *   ZP_API_BUDGET     calls allowed per window before the suite waits (default 150: headroom under 200)
+ *   ZP_API_BUDGET     calls allowed per window before the suite waits (default 190 since 15-10-2026, the user's cap is ~200;
+ *                     it was 150 — set ZP_API_BUDGET=150 to go back)
  *   ZP_API_WINDOW_MS  window length (default 120000)
  */
-const BUDGET = Number(process.env.ZP_API_BUDGET ?? 150);
+const BUDGET = Number(process.env.ZP_API_BUDGET ?? 190);
 const WINDOW_MS = Number(process.env.ZP_API_WINDOW_MS ?? 120_000);
 const calls: number[] = [];
 const tracked = new WeakSet<BrowserContext>();

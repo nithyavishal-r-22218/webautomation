@@ -85,7 +85,7 @@ export class CreateViewPage extends WorkloadEditPage {
       await items.first().waitFor({ timeout: 8_000 }).catch(() => {});
       options = (await items.allInnerTexts()).map(s => s.trim()).filter(Boolean);
       await this.page.keyboard.press('Escape');
-    } else if (/ruc-select/.test(tag)) options = await this.selectOptions(box);
+    } else if (/ruc-select/.test(tag) || await box.locator('.zselectbox__selected').count()) options = await this.selectOptions(box.locator('ruc-select').first().or(box));
     return { kind: tag, options, tabs };
   }
 
@@ -150,21 +150,48 @@ export class CreateViewPage extends WorkloadEditPage {
     await this.tick('Share Workload Report with other Users', mode !== 'none');
     if (mode === 'none') return;
     await this.radioKey(mode === 'all' ? 'input_alluser_cview' : 'input_specificusr_cview');
-    for (const u of users) await this.pickFromTokenField('Select User', u);
+    for (const u of users) await this.pickToken('users', u);
   }
   /** none = this report only; all = every project; projects = the named projects only. */
   async otherProjects(mode: 'none' | 'all' | 'projects', projects: string[] = []) {
     await this.tick('Show Workload Report in other Projects', mode !== 'none');
     if (mode === 'none') return;
     await this.radioKey(mode === 'all' ? 'input_cview_allproj' : 'input_cview_specificproj');
-    for (const p of projects) await this.pickFromTokenField('Select Project', p);
+    for (const p of projects) await this.pickToken('projects', p);
   }
-  private async pickFromTokenField(placeholder: string, text: string) {
-    const tb = this.page.locator(`input[placeholder^="${placeholder}"]`).filter({ visible: true }).first()
-      .or(this.page.getByText(placeholder, { exact: false }).filter({ visible: true }).first());
-    await tb.click(); await this.page.keyboard.type(text.slice(0, 10));
+
+  // ---------- the Specific Users / Specific Projects token fields ----------
+  /** The ztokenfield after the radio. Not located by placeholder: "Select User" disappears once a token is picked. */
+  tokenField(which: 'users' | 'projects') {
+    return qa(this.page, which === 'users' ? 'input_specificusr_cview' : 'input_cview_specificproj').first().locator('xpath=following::div[contains(@class,"ztokenfield")][1]');
+  }
+  tokenBox = (which: 'users' | 'projects') => this.tokenField(which).locator('input.ztokenfield__textbox');
+  /** The chips (every non-input child with text). */
+  tokens = (which: 'users' | 'projects') => this.tokenField(which).locator(':scope > *:not(input)').filter({ hasText: /\S/ });
+  async tokenTexts(which: 'users' | 'projects'): Promise<string[]> {
+    return (await this.tokens(which).allInnerTexts()).map(t => t.replace(/\s+/g, ' ').replace(/[\s×x✕✖]+$/u, '').trim()).filter(Boolean);
+  }
+  /** What the picker offers for `typed` (the typed text is cleared afterwards, the list closed). */
+  async pickerOptions(which: 'users' | 'projects', typed: string): Promise<string[]> {
+    const tb = this.tokenBox(which); await tb.click(); await tb.pressSequentially(typed);
+    const items = this.page.locator(CSS.option).filter({ visible: true });
+    await items.first().waitFor({ timeout: 5_000 }).catch(() => {});
+    const texts = (await items.allInnerTexts()).map(t => t.replace(/\s+/g, ' ').trim());
+    await this.page.keyboard.press('Escape'); await tb.fill('');
+    return texts;
+  }
+  async pickToken(which: 'users' | 'projects', text: string) {
+    const tb = this.tokenBox(which); await tb.click(); await tb.pressSequentially(text.slice(0, 12));
     await this.page.locator(CSS.option).filter({ visible: true }).getByText(text, { exact: false }).first().click();
     await this.page.keyboard.press('Escape');
+    await expect(this.tokens(which).filter({ hasText: text }), `${text} picked`).toHaveCount(1);
+  }
+  /** Remove a chip with its × control. */
+  async removeToken(which: 'users' | 'projects', text: string) {
+    const chip = this.tokens(which).filter({ hasText: text }).first();
+    const closer = chip.locator('[class*="close"], [class*="remove"], [class*="cross"], [class*="del"], i, svg, button').last();
+    if (await closer.count()) await closer.click(); else await chip.locator('xpath=./*[last()]').click();
+    await expect(this.tokens(which).filter({ hasText: text }), `${text} removed`).toHaveCount(0);
   }
 
   /** Save and wait for the create (PUT 201) and the new view's first data page. */

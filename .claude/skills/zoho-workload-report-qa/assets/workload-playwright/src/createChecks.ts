@@ -1,4 +1,5 @@
-import { expect, test } from '@playwright/test';
+import fs from 'fs';
+import { expect, test, type Page, type Response } from '@playwright/test';
 import { ZpApi } from './api';
 import { env } from './env';
 import { K, qa } from './locators';
@@ -22,7 +23,7 @@ import { uiRows } from './pdfExport';
  * The view is deleted (DELETE /views/{id}) in a finally block, whatever happens.
  */
 export interface Crit { field: string; condition: string; values?: string[]; kind?: ValueKind; text?: string[]; allocTab?: 'Hours' | 'Percentage'; dateTab?: 'Range' | 'Date' }
-export type ValueKind = 'list' | 'text' | 'number' | 'date' | 'daterange' | 'dates' | 'allocation' | 'none';
+export type ValueKind = 'list' | 'select' | 'text' | 'number' | 'date' | 'daterange' | 'dates' | 'allocation' | 'none';
 export interface CaseSpec {
   name: string; description?: string;
   viewType?: ViewType; unit?: Unit; option?: string; custom?: [Date, Date];
@@ -32,7 +33,7 @@ export interface CaseSpec {
   share?: { mode: 'none' | 'all' | 'users'; users?: string[] };
   projects?: { mode: 'none' | 'all' | 'projects'; projects?: string[] };
 }
-export interface Built { spec: CaseSpec; id: string; body: Record<string, any>; def: Record<string, any>; codes: { field: string; condition: string }[]; status: number; meta?: { status: number; text: string } }
+export interface Built { spec: CaseSpec; id: string; body: Record<string, any>; def: Record<string, any>; codes: { field: string; condition: string }[]; status: number; meta?: { status: number; text: string }; cap?: ViewCapture }
 export interface OwnerWork { id: string; name: string; work: number; alloc: string; resource: boolean; unassigned: boolean }
 
 /** JSON with sorted keys, so stored and sent objects compare regardless of key order. */
@@ -43,11 +44,15 @@ export const ymd = iso;
 /** Which value control a condition shows — read live from the row. */
 export async function valueKind(cv: CreateViewPage, i: number): Promise<ValueKind> {
   const row = cv.rows().nth(i);
+  // the value control is re-rendered after a condition change: give it a moment to appear
+  await row.locator('.condition-select-class, custom-allocation-range, daterange-picker, ruc-date-range, ruc-date, ruc-decimal, ruc-input, ruc-textarea').first().waitFor({ timeout: 5_000 }).catch(() => {});
   if (await row.locator('custom-allocation-range').count()) return 'allocation';
   if (await row.locator('daterange-picker').count()) return 'daterange';
   if (await row.locator('ruc-date-range').count()) return 'dates';
   if (await row.locator('ruc-date').count()) return 'date';
   if (await row.locator('.condition-select-class .ztokenfield').count()) return 'list';
+  // a plain dropdown (e.g. the Checkbox field: Yes / No) has a select box but no token field
+  if (await row.locator('.condition-select-class .zselectbox__selected, ruc-select.condition-select-class .zselectbox__selected').count()) return 'select';
   if (await row.locator('ruc-decimal').count()) return 'number';
   const inp = row.locator('.condition-select-class input, ruc-textarea textarea, textarea').first();
   if (await inp.count()) return (await inp.isDisabled().catch(() => false)) ? 'none' : 'text';
@@ -95,6 +100,15 @@ export async function fillCriterion(cv: CreateViewPage, i: number, c: Crit): Pro
       await page.keyboard.press('Escape');
       break;
     }
+    case 'select': {
+      // plain dropdown: pick the wanted label, else the first option
+      const sel = row.locator('ruc-select.condition-select-class, .condition-select-class ruc-select').first();
+      await sel.locator('.zselectbox__selected').click();
+      const items = page.locator('li.zdropdownlist__item').filter({ visible: true }); await items.first().waitFor({ timeout: 10_000 });
+      const want = c.values?.[0]; const named = want ? items.filter({ hasText: want }).first() : null;
+      if (named && await named.count()) await named.click(); else await items.first().click();
+      break;
+    }
     case 'text': case 'number': {
       const inp = row.locator('.condition-select-class input, ruc-textarea textarea, textarea').filter({ visible: true }).first();
       await inp.click(); await inp.pressSequentially(c.text?.[0] ?? (kind === 'number' ? '50' : 'CV'));
@@ -140,9 +154,61 @@ export async function fillCriterion(cv: CreateViewPage, i: number, c: Crit): Pro
   return { field, condition, kind };
 }
 
+/**
+ * The data the app itself loads for a view (pages of GET /reports/workload?view_id=… and the Unassigned row), so a check
+ * does not fetch the same rows again. Complete once the last page (page_info.has_next false) and the Unassigned call
+ * were seen; grouped views load through other endpoints and fall back to the API.
+ */
+export interface ViewCapture { ownersFor(viewId: string, from: string, to: string): Map<string, OwnerWork> | undefined; stop(): void }
+export function captureView(page: Page): ViewCapture {
+  const seen = new Map<string, { owners: Map<string, OwnerWork>; last: boolean; un: boolean }>();
+  const on = async (r: Response) => {
+    const u = new URL(r.url());
+    if (!/\/reports\/workload$/.test(u.pathname) || !r.ok()) return;
+    const key = `${u.searchParams.get('view_id')}|${(u.searchParams.get('from_date') ?? '').slice(0, 10)}|${(u.searchParams.get('to_date') ?? '').slice(0, 10)}`;
+    const j = await r.json().catch(() => null); if (!j) return;
+    const e = seen.get(key) ?? { owners: new Map(), last: false, un: false }; seen.set(key, e);
+    const un = u.searchParams.get('fetch_unassignee') === 'true';
+    for (const o of (j.owners ?? []) as any[]) e.owners.set(String(o.id), { id: String(o.id), name: String(o.name ?? ''), work: Number(o.work?.total_work ?? 0), alloc: String(o.work?.overall_allocation ?? ''), resource: !!o.is_resource, unassigned: un });
+    if (un) e.un = true; else if (j.page_info?.has_next === false || !(j.owners ?? []).length) e.last = true;
+  };
+  page.on('response', on);
+  return {
+    ownersFor: (viewId, from, to) => { const e = seen.get(`${viewId}|${from}|${to}`); return e && e.last && e.un ? e.owners : undefined; },
+    stop: () => page.off('response', on),
+  };
+}
+
+/**
+ * All Users for a period, read once per run and portal: every case compares with it, and the seeded data does not
+ * change during a create run. Kept in memory and in <reports>/cache/ (keyed by the run id), so the next test process
+ * of the same run reuses it.
+ */
+const baselines = new Map<string, Map<string, OwnerWork>>();
+export async function baselineOf(api: ZpApi, allUsersId: string, from: string, to: string, unit: Unit): Promise<Map<string, OwnerWork>> {
+  const key = `${allUsersId}|${from}|${to}|${unit}`;
+  const mem = baselines.get(key); if (mem) return mem;
+  const file = `${env.reportsDir}/cache/baseline-${env.runId}.json`;
+  let disk: Record<string, OwnerWork[]> = {};
+  try { disk = JSON.parse(fs.readFileSync(file, 'utf8')); } catch { /* none yet */ }
+  if (disk[key]) { const m = new Map(disk[key]!.map(o => [o.id, o])); baselines.set(key, m); return m; }
+  const m = await ownersOf(api, allUsersId, from, to, unit);
+  baselines.set(key, m);
+  try { fs.mkdirSync(`${env.reportsDir}/cache`, { recursive: true }); disk[key] = [...m.values()]; fs.writeFileSync(file, JSON.stringify(disk)); } catch { /* cache is best effort */ }
+  return m;
+}
+
+/** Reload the report only when the page cannot open the create form (no toolbar, or a "Permission Denied" page). */
+export async function ensureReport(wl: WorkloadPage) {
+  const ok = await qa(wl.page, K.viewDropdown).isVisible().catch(() => false);
+  const denied = await wl.page.getByText('Permission Denied').filter({ visible: true }).count().catch(() => 0);
+  if (!ok || denied) await wl.goto();
+}
+
 /** Open the form, fill the case, save. The form state is recorded just before Save (to tell UI and request apart). */
 export async function createCase(wl: WorkloadPage, spec: CaseSpec): Promise<Built> {
   const cv = new CreateViewPage(wl.page);
+  await ensureReport(wl);
   await cv.open(wl);
   await cv.setName(spec.name);
   if (spec.description !== undefined) await qa(wl.page, K.description).pressSequentially(spec.description);
@@ -188,6 +254,8 @@ export async function createCase(wl: WorkloadPage, spec: CaseSpec): Promise<Buil
   if (spec.share) await cv.share(spec.share.mode, spec.share.users);
   if (spec.projects) await cv.otherProjects(spec.projects.mode, spec.projects.projects);
   if (spec.grouping) { await cv.openTab('grouping'); test.info().annotations.push({ type: 'form', description: `${spec.name}: grouping on screen just before Save: ${(await cv.groupSelects().allInnerTexts().catch(() => [])).map(t => t.trim()).join(' / ')}` }); }
+  // the rows the app loads for the new view are read from its own responses (captureView)
+  const cap = captureView(wl.page);
   // the new view's meta request tells whether it can load at all (WL-D-36: some criteria give 400 here)
   const metaResp = wl.page.waitForResponse(x => /\/reports\/workload\/meta\?/.test(x.url()), { timeout: 150_000 }).catch(() => null);
   const r = await cv.create();
@@ -196,7 +264,7 @@ export async function createCase(wl: WorkloadPage, spec: CaseSpec): Promise<Buil
   const api = new ZpApi(wl.page, wl.d);
   const id = r.id || await idOf(api, spec.name);
   const def = id ? await api.view(id) : {};
-  return { spec, id, body: r.body, def, codes, status: r.put.status(), meta };
+  return { spec, id, body: r.body, def, codes, status: r.put.status(), meta, cap };
 }
 /**
  * Switch the tab to All Users before a created view is deleted: a tab still on a view that is deleted elsewhere
@@ -389,9 +457,11 @@ export const USER_LEVEL = new Set(['resource_type', 'allocation', 'role']);
  */
 export async function checkData(wl: WorkloadPage, b: Built, period: { from: string; to: string }, allUsersId: string): Promise<{ owners: Map<string, OwnerWork>; base: Map<string, OwnerWork> }> {
   const s = b.spec, api = new ZpApi(wl.page, wl.d), unit = s.unit ?? 'days';
-  const owners = await ownersOf(api, b.id, period.from, period.to, unit, s.reportsFor ?? 'users');
-  const base = await ownersOf(api, allUsersId, period.from, period.to, unit);
-  const ui = [...new Set(await uiIds(wl))];
+  const ui = [...new Set(await uiIds(wl))];   // scrolls to the end, so the app has loaded every page
+  const fromApp = (s.reportsFor ?? 'users') === 'users' && (!s.grouping || s.grouping === 'None') ? b.cap?.ownersFor(b.id, period.from, period.to) : undefined;
+  const owners = fromApp ?? await ownersOf(api, b.id, period.from, period.to, unit, s.reportsFor ?? 'users');
+  b.cap?.stop();
+  const base = await baselineOf(api, allUsersId, period.from, period.to, unit);
   if ((s.reportsFor ?? 'users') === 'users' && (!s.grouping || s.grouping === 'None')) {
     // the Unassigned row is listed whenever the API returns it, also with 0 work (seen 14-10-2026)
     const want = [...owners.values()].map(o => o.id).sort();

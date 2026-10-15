@@ -1,0 +1,131 @@
+ROLE
+You are a senior frontend engineer and product designer. Build a production-quality,
+pure-frontend Test Automation Control Center for an existing Playwright suite.
+It must run in a web browser with no backend, no build step and no server.
+
+DELIVERABLE
+- One self-contained index.html (HTML + CSS + JS inline). No server, no build step.
+- Allowed CDNs only (pin exact versions): Lucide icons, Chart.js, GSAP (animations),
+  canvas-confetti, JSZip. No other external requests.
+- Must work offline after first load, responsive (desktop first, usable at 768px),
+  light and dark theme via CSS variables, keyboard accessible, prefers-reduced-motion respected.
+
+HARD RULE: NO NATIVE UI
+Do not use native alert/confirm/prompt, <select>, <input type=checkbox/radio/date/range>,
+native title tooltips, or default scrollbars. Build custom components:
+dropdown (searchable, multi-select with chips), checkbox, toggle switch, radio cards,
+segmented control, modal, drawer, tooltip, toast, context menu, date-range picker,
+progress ring, skeleton loader, tabs, accordion. All icons are Lucide icons, never emoji.
+
+THE SUITE (seed this exact catalogue as data, grouped by project → file → test)
+Project "unit" (offline, non-mutating)
+  tests/unit/dates.spec.ts — Days unit expectedRange cases; N-day windows are exactly N days;
+  weeks never overlap; rolling 3-month options = check-spec; Weeks/Months units;
+  availableHours: Oct 2026 = 198 h, D-03 overrun = 225 h, custom Oct 12–Nov 6 = 180 h,
+  holidays excluded, fmt/parse round-trip.
+Project "workload" (Admin session, mutating, runs serially)
+  views-favourite-refresh.spec.ts — WL-G-01 All Users loads every user; WL-G-02/03 favourite
+  add/remove; WL-G-04 refresh keeps selections.
+  edit-combinations.spec.ts — step 1 description + every view type; step 2 every Relative
+  option per unit (Days/Weeks/Months); step 2 Custom range per unit; step 3 view style;
+  step 3 every data label per view type; step 3 Show Options (Timeline).
+  defects.spec.ts (@defect) — WL-D-02, WL-D-03, WL-D-04, WL-D-05, WL-D-06.
+Project "permissions" — SET-01 profile grid; per profile (none, view, manage, delete, full,
+  projonly, globonly): G-01/03 open, G-04 Create option, G-05 seed view menu,
+  G-06 API edit, G-07 API create; ISO user rows render.
+Tag each test: project, file, tags (@defect, mutating, offline), est. duration, and whether it
+needs a saved login for a profile.
+
+SCREENS
+1. Run Configuration (left panel)
+   - Environment dropdown: Local (projects.localzoho.com), Staging, Production. Each has baseURL
+     and portal; add/edit environments in a modal. Show a coloured env badge everywhere.
+   - Browser selection as icon radio cards: Chromium, Chrome, Firefox, WebKit, Edge, with
+     headed/headless toggle, viewport preset dropdown (1366×860 default), workers (locked to 1
+     with an explanatory tooltip for mutating projects), retries, timeout.
+   - Suite options mapped to the real .env: ZP_WEEK_START (Sunday/Monday segmented),
+     ZP_EXPECT_KNOWN_DEFECTS toggle, ZP_SEED_VIEW_PREFIX, RUN_ID (auto QA-WL-<timestamp>),
+     ZP_ALLOW_PROFILE_CHANGES toggle (shows a red warning modal before enabling),
+     saved-login status per profile (green/grey chips).
+   - Trace / screenshot / video mode dropdowns (off, on, retain-on-failure).
+   - "Copy CLI command" button that generates the exact npx playwright command
+     (--project, --grep, --headed, env vars) for the current selection. Toast on copy.
+2. Test Explorer (centre)
+   - Tree with checkboxes: project → file → test, live search, filter chips
+     (status, tag, project), select all / none / failed only.
+   - Every test row: Run button (run individually), status icon, last duration, flaky badge,
+     context menu (run, run with trace, view last result, copy grep command).
+   - Toolbar: Run selected, Run all, Run failed, Run @defect, Stop, Pause/Resume.
+3. Live Run view
+   - Overall progress ring + linear bar with percent (animated count-up), tests passed/failed/
+     skipped/remaining counters, elapsed time, ETA / time left (calculated from est. durations,
+     corrected by a moving average of actual durations), current test name, current step.
+   - Per-test progress bars in a queue list; the running test shows its live step log
+     (Action · Expected · Actual · layer: header / grid / API / reopened form) streaming in
+     a terminal-style panel with auto-scroll and a "pin" toggle.
+   - Mutating tests show an amber "portal state will be snapshotted and restored" chip and a
+     final "Restore verified" step.
+   - Toasts: run started, test failed (with "View bug" action), run finished, run stopped.
+4. Bugs
+   - A bug is created for every failed test. ID continues the WL-D-nn series.
+   - Each bug has: severity (Critical/Major/Minor/Cosmetic dropdown), functional vs cosmetic,
+     environment, browser, timestamp, numbered reproduction steps, Expected vs Actual,
+     evidence from at least two layers (header, grid, API params, reopened form),
+     screenshot, and video recording.
+   - Seed the known defects WL-D-01 to WL-D-06 with realistic steps and expected/actual text
+     taken from the catalogue above.
+   - Statuses: New → Confirmed / Not reproduced / Refined, with a re-verify button that
+     re-runs the linked test. Export a bug as Markdown or copy it to clipboard.
+5. Reports
+   - Run history list with diff between two runs (new failures, fixed, still failing).
+   - Animated dashboard: KPI cards with count-up, pass-rate donut, duration-per-test bar chart,
+     pass/fail trend line across runs, per-browser and per-environment breakdown,
+     slowest 5 tests, flaky tests, defect severity chart.
+   - Animations: staggered card entrance, chart draw-in, confetti on 100% pass,
+     a subtle shake on the failure KPI, smooth tab transitions.
+   - Export: report as a standalone HTML file, results as JSON and JUnit XML, all bugs as a ZIP.
+
+EXECUTION MODES (be honest in the UI about which mode is active)
+A) Simulation mode (default, works with no backend): a deterministic engine runs the
+   catalogue with realistic durations and step logs. Known defects fail and everything else
+   passes, with a seeded random-failure option. Clearly label the run banner "Simulated".
+B) Import mode: drag-and-drop or folder-pick the real Playwright output
+   (reports/results.json, junit.xml, test-results/** with *.webm videos, screenshots,
+   trace.zip). Parse the Playwright JSON reporter schema (suites → specs → tests → results
+   → attachments) into the same data model so Explorer, Bugs and Reports show real data,
+   and real videos play in the bug view.
+C) Adapter interface: isolate all execution behind
+   runner.start(config, tests) / runner.on('progress'|'step'|'result'|'end') / runner.stop()
+   so a WebSocket runner can replace the simulator later without UI changes.
+   Ship a stub WebSocketRunner with the expected message schema documented in a comment.
+
+VIDEO RECORDING
+- In simulation mode, render each test's run as an animated "browser replay" on a canvas:
+  a mock Workload Report page with a cursor, highlighted elements, the step caption, and a
+  red failure overlay. Record it with the MediaRecorder API into a real WebM.
+- Bug view: custom video player (no native controls) with play/pause, scrubber, speed
+  (0.5×/1×/2×), step markers on the timeline that jump to each step, download, fullscreen.
+- In import mode, use the Playwright video attachment instead.
+
+DATA AND PERSISTENCE
+- One state store. Persist environments, settings, run history and bugs to localStorage
+  (wrap every access in try/catch and fall back to memory). Store videos as object URLs
+  for the session; warn that they disappear on reload unless exported.
+- Settings page: theme, toast position, sound on finish, clear data (custom confirm modal).
+
+QUALITY BAR
+- Visual direction: modern dark-first QA console (think Linear / Vercel), Inter font with a
+  system fallback, 8px spacing grid, glassy panels, status colours
+  pass #22c55e, fail #ef4444, skip #a3a3a3, running #3b82f6, flaky #f59e0b.
+- Empty, loading (skeletons) and error states for every panel.
+- No console errors. Clean code split into clearly commented modules inside the one file:
+  store, catalogue, runner, recorder, importer, components, views, charts.
+
+ACCEPTANCE CHECKS (verify before finishing)
+1. Run one test individually → progress, ETA, step log, result, toast.
+2. Run all on Firefox + Staging → env/browser shown on run, bugs and report.
+3. A failed test has steps, expected/actual, two evidence layers, and a playable video.
+4. The report animates, exports HTML/JSON/JUnit, and compares two runs.
+5. Search the code: no native select, checkbox, radio, date input, alert or confirm.
+6. Importing a sample Playwright results.json populates every view.
+Then list anything you could not complete and why.

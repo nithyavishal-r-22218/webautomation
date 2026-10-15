@@ -6,7 +6,7 @@ import { addDays, type Unit } from '../../src/dates';
 import { CreateViewPage } from '../../src/pages/CreateViewPage';
 import type { WorkloadPage } from '../../src/pages/WorkloadPage';
 import {
-  waitLoaded, leaveToAllUsers, checkData, checkDefinition, checkOpened, checkReopened, createCase, pairwise, removeView, type Built, type CaseSpec,
+  ensureReport, waitLoaded, leaveToAllUsers, checkData, checkDefinition, checkOpened, checkReopened, createCase, pairwise, removeView, type Built, type CaseSpec,
 } from '../../src/createChecks';
 
 /**
@@ -117,7 +117,7 @@ for (const unit of ['days', 'weeks', 'months'] as Unit[]) {
     await qa(wl.page, K.cancel).click();
     expect(options.length, `${unit}: options read live`).toBeGreaterThan(0);
     for (const option of options) await test.step(option, async () => {
-      await wl.goto();
+      await ensureReport(wl);
       await runCase(wl, { name: nameOf(`CV-TP-${unit}-${option.replace(/\W+/g, '')}`), unit, option, viewType: 'bar', dataLabel: 'Allocated Hours' });
     });
     await test.step('Custom range', async () => {
@@ -125,7 +125,7 @@ for (const unit of ['days', 'weeks', 'months'] as Unit[]) {
       // Months: three months inside one year (the create form's month picker shows one year per panel)
       const y = t.getFullYear(), sm = t.getMonth() <= 9 ? t.getMonth() + 1 : t.getMonth() - 2;
       const range: [Date, Date] = unit === 'months' ? [new Date(y, sm, 1), new Date(y, sm + 2, 0)] : [addDays(t, 4), addDays(t, 29)];
-      await wl.goto();
+      await ensureReport(wl);
       await runCase(wl, { name: nameOf(`CV-TP-${unit}-custom`), unit, custom: range, viewType: 'bar', dataLabel: 'Allocated Hours' });
     });
   });

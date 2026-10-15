@@ -197,25 +197,42 @@ async function queueRun(args) {
   const results = []; const busy = Object.fromEntries(listed.map(p => [p, 0]));
   let n = 0; const total = queue.length; const started = Date.now();
   console.log(`queue run ${runId}: ${total} tests on ${listed.length} portals (${listed.join(', ')}), ~${Math.round(queue.reduce((a, t) => a + est(t), 0) / 60 / listed.length)} min each if spread evenly`);
+  // a free portal takes the next test; short tests (< SHORT s) are taken together with more short tests of the same file,
+  // up to BATCH s, so one process (browser start, sign-in, report load) serves several of them
+  const SHORT = Number(process.env.ZP_QUEUE_SHORT ?? 180), BATCH = Number(process.env.ZP_QUEUE_BATCH ?? 420), MAXB = 8;
   async function worker(p) {
     for (;;) {
       const i = queue.findIndex(t => allowed(p, t));
       if (i < 0) return;
-      const t = queue.splice(i, 1)[0]; const k = ++n; t.tries++;
+      const first = queue.splice(i, 1)[0];
+      const batch = [first];
+      if (est(first) < SHORT) {
+        let sum = est(first);
+        for (let j = 0; j < queue.length && batch.length < MAXB;) {
+          const t = queue[j];
+          if (t.file === first.file && allowed(p, t) && est(t) < SHORT && sum + est(t) <= BATCH) { batch.push(t); sum += est(t); queue.splice(j, 1); }
+          else j++;
+        }
+      }
+      const k = n + 1; n += batch.length; for (const t of batch) t.tries++;
       const out = path.resolve(dir, `${String(k).padStart(4, '0')}-${p}.json`);
-      console.log(`[${p}]`.padEnd(18) + `▶ ${k}/${total} ${t.title.slice(0, 110)}`);
+      for (const [x, t] of batch.entries()) console.log(`[${p}]`.padEnd(18) + `▶ ${k + x}/${total} ${t.title.slice(0, 110)}`);
       const t0 = Date.now();
-      // the file plus the exact title (anchored at the end, after a separator) selects this test; no line number, so a spec
-      // edited while the queue runs is still found
-      const code = await runWith(p, [...flags, `tests/${t.file}`, '--grep', `(^|\\s)${reEsc(t.title)}$`], { ZP_RESULTS_FILE: out, ZP_HTML_REPORT: '0' });
+      // the file plus the exact titles (anchored at the end, after a separator) select these tests; no line numbers, so a
+      // spec edited while the queue runs is still found
+      const grep = `(^|\\s)(${batch.map(t => reEsc(t.title)).join('|')})$`;
+      const code = await runWith(p, [...flags, `tests/${first.file}`, '--grep', grep], { ZP_RESULTS_FILE: out, ZP_HTML_REPORT: '0' });
       busy[p] += (Date.now() - t0) / 1000;
-      const got = readReport(out).filter(r => r.title === t.title);
-      if (!got.length && t.tries < 2) { console.log(`[${p}]`.padEnd(18) + `↻ no result (exit ${code}) — back in the queue: ${t.title.slice(0, 90)}`); queue.unshift(t); continue; }
-      const r = got[0] ?? { file: t.file, title: t.title, status: 'crashed', seconds: (Date.now() - t0) / 1000, issues: [], errors: [`exit ${code}`] };
-      results.push({ ...r, portal: p });
-      dur[key(t)] = Math.round(r.seconds);
-      const mark = { expected: '✓', flaky: '~', skipped: '-', unexpected: '✘', crashed: '✘' }[r.status] ?? '?';
-      console.log(`[${p}]`.padEnd(18) + `${mark} ${k}/${total} ${r.status}${r.issues.length ? ` (${[...new Set(r.issues)].join(', ')})` : ''} ${Math.round(r.seconds)}s · ${t.title.slice(0, 90)}`);
+      const got = readReport(out);
+      for (const [x, t] of batch.entries()) {
+        const r0 = got.find(r => r.title === t.title);
+        if (!r0 && t.tries < 2) { console.log(`[${p}]`.padEnd(18) + `↻ no result (exit ${code}) — back in the queue: ${t.title.slice(0, 90)}`); queue.unshift(t); continue; }
+        const r = r0 ?? { file: t.file, title: t.title, status: 'crashed', seconds: (Date.now() - t0) / 1000 / batch.length, issues: [], errors: [`exit ${code}`] };
+        results.push({ ...r, portal: p });
+        dur[key(t)] = Math.round(r.seconds);
+        const mark = { expected: '✓', flaky: '~', skipped: '-', unexpected: '✘', crashed: '✘' }[r.status] ?? '?';
+        console.log(`[${p}]`.padEnd(18) + `${mark} ${k + x}/${total} ${r.status}${r.issues.length ? ` (${[...new Set(r.issues)].join(', ')})` : ''} ${Math.round(r.seconds)}s · ${t.title.slice(0, 90)}`);
+      }
     }
   }
   await Promise.all(listed.map(worker));
