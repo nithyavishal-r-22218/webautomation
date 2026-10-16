@@ -33,7 +33,9 @@
     "user:activate": "playwright test --project=tools tests/tools/reactivate.spec.ts",
     "portal:timezone": "playwright test --project=tools tests/tools/portal-timezone.spec.ts",
     "test:env": "ZP_ALLOW_SETTINGS_CHANGES=1 ZP_ALLOW_USER_CHANGES=1 playwright test --project=workload tests/workload/portal-timezone.spec.ts tests/workload/user-deactivation.spec.ts tests/workload/performance.spec.ts",
-    "work:dump": "playwright test --project=tools tests/tools/dump-work.spec.ts"
+    "work:dump": "playwright test --project=tools tests/tools/dump-work.spec.ts",
+    "test:grid": "playwright test --project=workload tests/workload/grid-interactions.spec.ts tests/workload/grid-editing.spec.ts",
+    "cleanup:projects": "playwright test --project=tools tests/tools/cleanup-qa-projects.spec.ts"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1",
